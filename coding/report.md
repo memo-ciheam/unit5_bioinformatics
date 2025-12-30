@@ -1,6 +1,6 @@
 
-# Session 1_Exercise 1
-
+# Session 1_Exercise 1  
+ 
 ## Question  
 **How many sequences have been formatted 
 and how does this affect the E-value of BLAST searches?**
@@ -29,17 +29,17 @@ using the makeblastdb command:
 This command creates all the index files required by BLAST to
 efficiently search protein sequences.
 
-Results
+## Results
 
 The database formatting process produced the following output:
 
-Adding sequences from FASTA; added 15719 sequences in 0.166255 seconds.
+Adding sequences from FASTA; added **15719 sequences in 0.166255 seconds**.
 
 This indicates that a total of 15,719 protein sequences from 
 Arabidopsis thaliana were successfully included in the BLAST database.
 
 
-Interpretation and discussion
+## Interpretation and discussion
 
 The E-value in BLAST describes the number of alignments with a given 
 score that are expected to occur by chance when searching a database 
@@ -58,7 +58,7 @@ database size: a low E-value in a large database provides stronger
 evidence of biological relevance than the same score obtained from a 
 small database.
 
-Difficulties encountered
+## Difficulties encountered
 
 The main difficulty encountered during this exercise was related to the
 execution environment. The BLAST software was installed inside a Docker
@@ -67,7 +67,7 @@ default system PATH. As a result, the correct absolute path to the
 BLAST binaries had to be identified before the command could be executed
 successfully.
 
-References
+## References
 
 BLAST Help Manual – E-value definition
 https://blast.ncbi.nlm.nih.gov/doc/blast-help/FAQ.html
