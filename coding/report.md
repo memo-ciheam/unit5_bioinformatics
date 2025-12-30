@@ -21,7 +21,7 @@ with particular emphasis on the E-value.
 First, the compressed UniProt protein dataset was decompressed:
 
 ```bash
-gunzip uniprot_Atha.fasta.gz
+gunzip uniprot_Atha.fasta.gz```
 
 Then, the protein FASTA file was formatted as a BLAST database 
 using the makeblastdb command:
