@@ -1,5 +1,8 @@
 
-# Session 1_Exercise 1  
+# Session 1_Annotation of coding sequences
+
+<details>
+<summary><strong>Exercise 1</strong></summary> 
  
 ## Question  
 **How many sequences have been formatted 
@@ -77,3 +80,6 @@ https://blast.ncbi.nlm.nih.gov/doc/blast-help/FAQ.html
 OpenAI ChatGPT – used for language refinement and conceptual 
 clarification of BLAST E-value interpretation
 Prompt-based assistance during Session 1, Exercise 1
+
+</details>
+
