@@ -25,11 +25,11 @@ gunzip uniprot_Atha.fasta.gz
 ```
 Then, the protein FASTA file was formatted as a BLAST database 
 using the makeblastdb command:
-
+```bash
 /home/vep/get_homologues/bin/ncbi-blast-2.16.0+/bin/makeblastdb \
   -dbtype prot \
   -in uniprot_Atha.fasta
-
+```
 This command creates all the index files required by BLAST to
 efficiently search protein sequences.
 
