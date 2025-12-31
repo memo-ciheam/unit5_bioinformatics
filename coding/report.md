@@ -6,8 +6,8 @@
  
 ## Question  
 
-How many sequences have been formatted 
-and how does this affect the E-value of BLAST searches?
+**How many sequences have been formatted 
+and how does this affect the E-value of BLAST searches?**
 
 ## Objective
 
@@ -92,8 +92,8 @@ Prompt-based assistance during Session 1, Exercise 1
 
 ## Question  
 
-Can you redirect the output of `blastp` and `blastx`  
-to separate files called `test.faa.blast` and `test.fna.blast`?
+**Can you redirect the output of `blastp` and `blastx`  
+to separate files called `test.faa.blast` and `test.fna.blast`?**
 
 ## Objective  
 
@@ -167,3 +167,69 @@ OpenAI ChatGPT – used for language refinement and clarification
 of BLAST output redirection during Session 1, Exercise 2
 
 </details>
+
+<details>
+<summary><strong>🔴 Exercise 3</strong></summary>
+
+## Question
+
+**What is the default alignment format, and can you show an example?**
+
+## Objective
+
+The objective of this exercise was to identify the default output format  
+used by BLAST when no output format is explicitly specified.
+
+In addition, the aim was to understand how alignment information  
+is presented in this default format and to recognize its main components  
+through a real BLAST result example.
+
+## Commands used
+
+```bash
+vep@5dc71ff4216c:/data$ /home/vep/get_homologues/bin/ncbi-blast-2.16.0+/bin/blastp \
+-db uniprot_Atha.fasta \
+-query test.faa
+```
+## Results
+
+Running the BLAST command without specifying the `-outfmt` option  
+produced a pairwise alignment output.
+
+**An excerpt of the default BLAST alignment output** is shown below:
+
+```text
+>sp|Q9XIK5|Y1045_ARATH B3 domain-containing protein At1g10455
+OS=Arabidopsis thaliana OX=3702 GN=At1g10455 PE=2 SV=1
+Length=152
+
+ Score = 28.1 bits (61),  Expect = 9.7
+ Identities = 21/92 (23%), Positives = 40/92 (43%), Gaps = 4/92 (4%)
+
+Query  131  KTLTASDTSTHGGFSVPRRAAEK-VFPPLDYS---QQPPAQELMARDLHDNEWKFRHIFR  186
+            K L+ SD        +P++  E  V P +D+    +     E+  RD+   +  +    +
+Sbjct  26   KKLSDSDLYYSAQLYLPKQEMEHFVLPEMDHDLVRKLGAGVEVKVRDVDSVDDFYTVRLK  85
+```
+This output corresponds to **the default BLAST alignment format**.
+
+## Interpretation and discussion
+
+The default BLAST output format is the **pairwise alignment format**,  
+also known as **outfmt 0**.
+
+In this format, alignments are displayed in a human-readable way,  
+including detailed information such as alignment blocks,  
+identity and similarity percentages, gap positions, bit scores,  
+E-values, and scoring parameters.
+
+This format is particularly useful for manual inspection of alignments,  
+as it allows direct visualization of matched regions between  
+query and subject sequences.
+
+## References
+
+OpenAI ChatGPT – used for language refinement and clarification  
+of BLAST default alignment formats during Session 1, Exercise 3
+</details>
+
+
