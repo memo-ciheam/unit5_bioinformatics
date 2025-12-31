@@ -573,116 +573,117 @@ with containerized bioinformatics workflows.
 
 ## Question
 
-Produce a table with  
-i) domains defined by the boundaries of matched entries from the Protein Data Bank (PDB) and Pfam  
-ii) similar sequences identified in AlphaFoldDB  
-for the protein AT1G30330.2 (ARF6).
+**Produce a table with  
+i) domains defined by the boundaries of matched entries from the Protein Data Bank and Pfam  
+ii) similar sequences in AlphaFoldDB.**
 
 ---
 
 ## Objective
 
-The objective of this exercise was to annotate the function of the protein
-AT1G30330.2 (Auxin Response Factor 6) based on predicted structural similarity.
+The objective of this exercise was to annotate the protein AT1G30330.2  
+(Auxin Response Factor 6, ARF6) based on predicted structural similarity.
 
 Specifically, the aim was to:
-- Identify protein domains using HHPred by comparison with PDB and Pfam entries.
-- Detect structurally similar proteins using AlphaFoldDB.
-- Summarize the results in a clear, interpretable table.
+
+- Identify protein domains using structural matches from the Protein Data Bank (PDB)  
+  and domain annotations from Pfam, as reported by HHPred.
+- Identify structurally similar proteins using AlphaFoldDB search results.
+
+All annotations reported below are based strictly on observed matches from the tools used,  
+without manual inference of domain boundaries.
 
 ---
 
 ## Methods
 
-Structural homology searches were performed using **HHPred**, with the full
-protein sequence of AT1G30330.2 provided as input.
+### Structural domain identification (PDB and Pfam)
 
-Matched entries from:
-- the **Protein Data Bank (PDB)**,
-- **Pfam domain models**, and
-- **AlphaFoldDB**
+The protein sequence of AT1G30330.2 (ARF6) was submitted to the HHPred web server.  
+Matches against the PDB and Pfam databases were inspected, and domain annotations  
+were extracted directly from the reported hits.
 
-were examined to define domain boundaries and identify structurally similar
-proteins.
+### Identification of similar proteins in AlphaFoldDB
+
+Structural homologs were identified using AlphaFoldDB search results obtained via  
+EBI resources. The top-ranked AlphaFoldDB hits were used to define structurally  
+similar sequences.
 
 ---
 
 ## Results
 
-### (i) Domains identified by PDB and Pfam matches
+### Table 1. Domains identified by HHPred (PDB and Pfam matches)
 
-| Source | ID | Domain / Description | Approximate boundaries |
-|------|----|----------------------|------------------------|
-| PDB | 4LDU_A | Auxin Response Factor (DNA-binding domain) | ~1–346 |
-| PDB | 4LDV_A | Auxin Response Factor (DNA-binding domain) | ~1–346 |
-| PDB | 4CHK_H | PB1 domain (protein–protein interaction) | ~700–820 |
-| Pfam | PF06507 | ARF ancillary domain (ARF_AD) | ~350–430 |
-| Pfam | PF25313 | BRWD/PHIP ancillary domain-like | ~430–500 |
+| Source | Database ID | Description |
+|------|------------|-------------|
+| PDB | 4LDU_A | Auxin response factor 5 |
+| PDB | 4LDV_A | Auxin response factor 1 |
+| PDB | 8OJ2_A | Auxin response factor |
+| Pfam | PF06507.19 | ARF ancillary domain (ARF_AD) |
+| PDB | 4CHK_H | PB1 domain of Auxin response factor 5 |
+| PDB | 6L5K_A | Auxin response factor 5 |
+| PDB | 2M1M_A | Auxin-induced protein IAA4 |
+| PDB | 4NJ6_I | Auxin response factor 7 |
+| Pfam | PF25313.1 | BRWD/PHIP ancillary domain-like |
+| Pfam | PF09217.15 | EcoRII-N terminal domain |
 
-These results indicate that ARF6 contains a conserved N-terminal DNA-binding
-domain, followed by auxiliary domains and a C-terminal PB1 domain involved
-in protein–protein interactions.
+These domains were defined exclusively by the boundaries and annotations of  
+the matched PDB and Pfam entries reported by HHPred.
 
 ---
 
-### (ii) Similar sequences identified in AlphaFoldDB
+### Table 2. Structurally similar proteins identified in AlphaFoldDB
 
-| AlphaFoldDB ID | Protein name | Organism | Length (aa) | Identity (%) | E-value |
-|----------------|--------------|----------|-------------|---------------|---------|
-| AFDB:Q9ZTX8 | Auxin response factor 6 (ARF6) | Arabidopsis thaliana | 935 | 100.0 | 0 |
-| AFDB:A0A8T2GKV4 | Auxin response factor | Arabidopsis thaliana × Arabidopsis arenosa | 935 | 100.0 | 0 |
-| AFDB:A0A654EE38 | Auxin response factor | Arabidopsis thaliana | 935 | 100.0 | 0 |
-| AFDB:A0A8T2HB63 | Auxin response factor | Arabidopsis suecica | 935 | 100.0 | 0 |
-| AFDB:A0A5S9WDQ8 | Auxin response factor | Arabidopsis thaliana | 935 | 99.9 | 0 |
+| AlphaFoldDB ID | Protein name | Species |
+|--------------|-------------|---------|
+| AFDB:Q9ZTX8 | Auxin response factor 6 (ARF6) | Arabidopsis thaliana |
+| AFDB:A0A8T2GKV4 | Auxin response factor | Arabidopsis thaliana × Arabidopsis arenosa |
+| AFDB:A0A654EE38 | Auxin response factor | Arabidopsis thaliana |
+| AFDB:A0A8T2HB63 | Auxin response factor | Arabidopsis suecica |
+| AFDB:R0GUI5 | Auxin response factor | Capsella rubella |
+| AFDB:A0A087GC94 | Auxin response factor | Arabis alpina |
 
-All identified AlphaFoldDB hits correspond to Auxin Response Factor proteins,
-showing extremely high structural similarity and confirming strong evolutionary
-conservation within this protein family.
+These entries represent proteins with high structural similarity to ARF6,  
+based on AlphaFoldDB predictions.
 
 ---
 
 ## Interpretation and discussion
 
-The HHPred analysis clearly indicates that ARF6 is a modular protein composed
-of conserved functional domains.
+The HHPred results reveal that ARF6 shares conserved structural domains  
+with other Auxin Response Factors and related transcriptional regulators,  
+including PB1 and ARF ancillary domains.
 
-The N-terminal region corresponds to a DNA-binding domain characteristic of
-auxin response factors, while the C-terminal PB1 domain mediates protein–protein
-interactions essential for transcriptional regulation.
+The AlphaFoldDB results further confirm strong structural conservation  
+of ARF6 across closely related plant species, supporting its conserved  
+functional role in auxin-mediated transcriptional regulation.
 
-The AlphaFoldDB results further support this annotation by revealing numerous
-highly similar proteins across closely related plant species, all displaying
-near-identical predicted structures and extremely significant similarity
-scores.
-
-Together, these results provide strong structural evidence supporting the
-functional annotation of AT1G30330.2 as a transcription factor involved in
-auxin signaling.
+By combining domain-level annotations from PDB and Pfam with structural  
+homologs from AlphaFoldDB, this analysis provides a structure-informed  
+functional annotation of AT1G30330.2.
 
 ---
 
 ## Difficulties encountered
 
-The main difficulty encountered during this exercise was related to the
-interpretation of HHPred and AlphaFoldDB interfaces.
-
-While HHPred directly reports both PDB and Pfam matches, AlphaFoldDB results
-are presented through linked databases rather than a dedicated standalone
-search interface. This required careful identification of relevant AlphaFoldDB
-entries and manual extraction of key information for reporting.
+No conceptual difficulties were encountered during this exercise.  
+However, the analysis required careful separation of domain annotations  
+(PDB and Pfam) from structural similarity results (AlphaFoldDB), as these  
+represent distinct but complementary sources of information.
 
 ---
 
 ## References
 
-HHPred server documentation  
-https://toolkit.tuebingen.mpg.de/tools/hhpred  
+HHPred server  
+https://toolkit.tuebingen.mpg.de/tools/hhpred
 
 AlphaFold Protein Structure Database  
-https://alphafold.ebi.ac.uk  
+https://alphafold.ebi.ac.uk
 
-OpenAI ChatGPT – used for language refinement and structured reporting  
-during Session 1, Exercise 7
+OpenAI ChatGPT – used for language refinement and structuring  
+of the report during Session 1, Exercise 7
 
 </details>
 
