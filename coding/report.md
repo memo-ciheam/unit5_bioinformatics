@@ -439,4 +439,133 @@ of PSI-BLAST PSSM output during Session 1, Exercise 5
 
 </details>
 
+<details>
+<summary><strong>🔴 Exercise 6</strong></summary>
+
+## Question
+
+**This task actually comprises four steps:**
+
+**Create a FASTA file with the complete protein sequences of the matches of your protein search with bit score > 200. You might find one-liners useful for this.**
+
+**Compute a multiple alignment of these sequences with Clustal Omega. Check the available output formats.**
+
+**Build a HMM out of these aligned sequences with hmmbuild**
+
+**Scan the HMM against your sequence collection with hmmerscan and write a short report on the results.** 
+
+## Objective
+
+The objective of this exercise was to construct a Hidden Markov Model (HMM)
+from a set of homologous protein sequences and to use this model to search
+for related sequences in a protein database.
+
+Specifically, the aim was to:
+1. Select high-confidence homologous sequences based on BLAST bit score.
+2. Generate a multiple sequence alignment.
+3. Build a profile HMM from the alignment.
+4. Scan the HMM against the full UniProt protein collection.
+
+## Commands used
+
+```bash
+# Inspect BLAST output
+head test.faa.blast
+
+# Select UniProt IDs with bit score > 200
+awk '$12 > 200 {print $2}' test.faa.blast | sort -u > high_score_ids.txt
+
+# Count selected sequences
+wc -l high_score_ids.txt
+
+# Extract full-length protein sequences
+grep -A1 -F -f high_score_ids.txt uniprot_Atha.fasta > high_score_seqs.fasta
+
+# Verify FASTA sequence count
+grep ">" high_score_seqs.fasta | wc -l
+
+# Multiple sequence alignment with Clustal Omega
+clustalo \
+  -i high_score_seqs.fasta \
+  -o high_score_seqs.aln \
+  --outfmt=clu \
+  --force
+
+# Build profile HMM from alignment
+/usr/bin/hmmbuild arf6_profile.hmm high_score_seqs.aln
+
+# Scan HMM against protein database
+/usr/bin/hmmsearch \
+  --tblout arf6_hmm_results.tbl \
+  arf6_profile.hmm \
+  uniprot_Atha.fasta > arf6_hmm_results.txt
+
+# Count number of significant hits
+grep -v "^#" arf6_hmm_results.tbl | wc -l
+```
+## Results
+
+A total of **22 protein sequences** with BLAST bit score greater than 200  
+were selected and used to construct a multiple sequence alignment.
+
+The alignment was successfully generated using **Clustal Omega** and served  
+as input for HMM construction.
+
+The **hmmbuild** step produced a profile HMM with the following properties:
+
+- **Number of sequences:** 22  
+- **Alignment length:** 136 positions  
+- **Model length:** 102 match states  
+
+The **hmmsearch** step identified **23 significant matches** when scanning the  
+HMM against the UniProt *Arabidopsis thaliana* protein database.
+
+## Interpretation and discussion
+
+The constructed HMM captures conserved sequence features shared among  
+high-confidence ARF6 homologs. Unlike pairwise BLAST searches, the HMM  
+encodes position-specific residue preferences and gap probabilities,  
+allowing more sensitive detection of distant homologs.
+
+The fact that **hmmsearch identified a similar but not identical number of  
+sequences** compared to the initial BLAST filtering highlights the  
+complementary nature of profile-based methods. HMMs are particularly  
+effective at detecting weak but biologically meaningful similarities  
+that may be missed by standard BLAST searches.
+
+Overall, this exercise demonstrates how multiple sequence alignment and  
+profile HMMs provide a powerful framework for modeling protein families  
+and exploring sequence diversity.
+
+## Difficulties encountered
+
+Several difficulties were encountered during this exercise.
+
+Initially, the **Clustal Omega** and **HMMER** executables were not available  
+in the default system PATH inside the Docker container. This required  
+switching to the root user and installing or locating the appropriate  
+software binaries.
+
+In addition, different versions of **BLAST** and **HMMER** were installed in  
+different directories, which caused initial confusion when commands such  
+as `hmmbuild` were not found despite the software being installed.  
+The issue was resolved by identifying and using the correct absolute  
+paths to the executables.
+
+These challenges emphasize the importance of understanding software  
+environments, executable paths, and permission management when working  
+with containerized bioinformatics workflows.
+
+## References
+
+- **HMMER User Guide**  
+  http://hmmer.org/documentation.html  
+
+- **BLAST Help Manual**  
+  https://blast.ncbi.nlm.nih.gov/doc/blast-help/FAQ.html  
+
+- **OpenAI ChatGPT** – used for language refinement and conceptual clarification  
+  during Session 1, Exercise 6
+
+</details>
 
