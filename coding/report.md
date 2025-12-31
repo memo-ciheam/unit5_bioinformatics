@@ -6,8 +6,8 @@
  
 ## Question  
 
-**How many sequences have been formatted 
-and how does this affect the E-value of BLAST searches?**
+How many sequences have been formatted 
+and how does this affect the E-value of BLAST searches?
 
 ## Objective
 
