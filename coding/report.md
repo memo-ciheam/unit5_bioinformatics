@@ -568,4 +568,121 @@ with containerized bioinformatics workflows.
   during Session 1, Exercise 6
 
 </details>
+<details>
+<summary><strong>🔴 Exercise 7</strong></summary>
+
+## Question
+
+Produce a table with  
+i) domains defined by the boundaries of matched entries from the Protein Data Bank (PDB) and Pfam  
+ii) similar sequences identified in AlphaFoldDB  
+for the protein AT1G30330.2 (ARF6).
+
+---
+
+## Objective
+
+The objective of this exercise was to annotate the function of the protein
+AT1G30330.2 (Auxin Response Factor 6) based on predicted structural similarity.
+
+Specifically, the aim was to:
+- Identify protein domains using HHPred by comparison with PDB and Pfam entries.
+- Detect structurally similar proteins using AlphaFoldDB.
+- Summarize the results in a clear, interpretable table.
+
+---
+
+## Methods
+
+Structural homology searches were performed using **HHPred**, with the full
+protein sequence of AT1G30330.2 provided as input.
+
+Matched entries from:
+- the **Protein Data Bank (PDB)**,
+- **Pfam domain models**, and
+- **AlphaFoldDB**
+
+were examined to define domain boundaries and identify structurally similar
+proteins.
+
+---
+
+## Results
+
+### (i) Domains identified by PDB and Pfam matches
+
+| Source | ID | Domain / Description | Approximate boundaries |
+|------|----|----------------------|------------------------|
+| PDB | 4LDU_A | Auxin Response Factor (DNA-binding domain) | ~1–346 |
+| PDB | 4LDV_A | Auxin Response Factor (DNA-binding domain) | ~1–346 |
+| PDB | 4CHK_H | PB1 domain (protein–protein interaction) | ~700–820 |
+| Pfam | PF06507 | ARF ancillary domain (ARF_AD) | ~350–430 |
+| Pfam | PF25313 | BRWD/PHIP ancillary domain-like | ~430–500 |
+
+These results indicate that ARF6 contains a conserved N-terminal DNA-binding
+domain, followed by auxiliary domains and a C-terminal PB1 domain involved
+in protein–protein interactions.
+
+---
+
+### (ii) Similar sequences identified in AlphaFoldDB
+
+| AlphaFoldDB ID | Protein name | Organism | Length (aa) | Identity (%) | E-value |
+|----------------|--------------|----------|-------------|---------------|---------|
+| AFDB:Q9ZTX8 | Auxin response factor 6 (ARF6) | Arabidopsis thaliana | 935 | 100.0 | 0 |
+| AFDB:A0A8T2GKV4 | Auxin response factor | Arabidopsis thaliana × Arabidopsis arenosa | 935 | 100.0 | 0 |
+| AFDB:A0A654EE38 | Auxin response factor | Arabidopsis thaliana | 935 | 100.0 | 0 |
+| AFDB:A0A8T2HB63 | Auxin response factor | Arabidopsis suecica | 935 | 100.0 | 0 |
+| AFDB:A0A5S9WDQ8 | Auxin response factor | Arabidopsis thaliana | 935 | 99.9 | 0 |
+
+All identified AlphaFoldDB hits correspond to Auxin Response Factor proteins,
+showing extremely high structural similarity and confirming strong evolutionary
+conservation within this protein family.
+
+---
+
+## Interpretation and discussion
+
+The HHPred analysis clearly indicates that ARF6 is a modular protein composed
+of conserved functional domains.
+
+The N-terminal region corresponds to a DNA-binding domain characteristic of
+auxin response factors, while the C-terminal PB1 domain mediates protein–protein
+interactions essential for transcriptional regulation.
+
+The AlphaFoldDB results further support this annotation by revealing numerous
+highly similar proteins across closely related plant species, all displaying
+near-identical predicted structures and extremely significant similarity
+scores.
+
+Together, these results provide strong structural evidence supporting the
+functional annotation of AT1G30330.2 as a transcription factor involved in
+auxin signaling.
+
+---
+
+## Difficulties encountered
+
+The main difficulty encountered during this exercise was related to the
+interpretation of HHPred and AlphaFoldDB interfaces.
+
+While HHPred directly reports both PDB and Pfam matches, AlphaFoldDB results
+are presented through linked databases rather than a dedicated standalone
+search interface. This required careful identification of relevant AlphaFoldDB
+entries and manual extraction of key information for reporting.
+
+---
+
+## References
+
+HHPred server documentation  
+https://toolkit.tuebingen.mpg.de/tools/hhpred  
+
+AlphaFold Protein Structure Database  
+https://alphafold.ebi.ac.uk  
+
+OpenAI ChatGPT – used for language refinement and structured reporting  
+during Session 1, Exercise 7
+
+</details>
 
