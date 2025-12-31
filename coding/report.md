@@ -364,14 +364,14 @@ which contains the final position-specific scoring matrix computed
 after three iterations.
 
 The header of the file indicates that the matrix was built using the
-BLOSUM62 substitution matrix, with gap penalties set to an existence
-cost of 11 and an extension cost of 1.
+**BLOSUM62 substitution matrix**, with **gap penalties set** to an **existence
+cost of 11 and an extension cost of 1**.
 
 The main body of the file consists of a table where each row corresponds
 to a position in the query protein sequence, and each column corresponds
 to one of the 20 standard amino acids.
 
-For each position, the file reports:
+**For each position, the file reports:**
 
 - Position index and query amino acid  
 - Position-specific substitution scores for all amino acids  
@@ -381,7 +381,7 @@ For each position, the file reports:
 
 ## Interpretation and discussion
 
-The file `profile.out` represents a Position-Specific Scoring Matrix (PSSM),
+The file `profile.out` represents a **Position-Specific Scoring Matrix (PSSM)**,
 which captures evolutionary constraints at each position of the protein.
 
 High positive scores for specific amino acids at a given position
@@ -417,7 +417,7 @@ highlighted permission limitations when working inside the container.
 Eventually, `psiblast` was located in `/usr/bin/psiblast`, indicating
 that PSI-BLAST was installed system-wide but not bundled with the local
 BLAST binaries used earlier in the session. After switching to the
-correct executable path and running the command as the root user, the
+correct executable path and running the command as **the root user**, the
 PSI-BLAST analysis completed successfully and produced the expected
 `profile.out` file.
 
