@@ -72,10 +72,6 @@ database size: a low E-value in a large database provides stronger
 evidence of biological relevance than the same score obtained from a 
 small database.
 
-## Difficulties encountered
-
-No difficulties
-
 ## References
 
 BLAST Help Manual – E-value definition
@@ -232,4 +228,84 @@ OpenAI ChatGPT – used for language refinement and clarification
 of BLAST default alignment formats during Session 1, Exercise 3
 </details>
 
+<details>
+<summary><strong>🔴 Exercise 4</strong></summary>
+
+## Question
+
+**Are there differences in the results retrieved in both searches?**
+
+## Objective
+
+The objective of this exercise was to perform a quantitative comparison  
+between the results obtained from `blastp` and `blastx` searches.
+
+Specifically, the aim was to evaluate differences in the number of hits,  
+E-values, and alignment lengths based on real BLAST output data.
+
+## Commands used
+
+```bash
+vep@5dc71ff4216c:/data$ /home/vep/get_homologues/bin/ncbi-blast-2.16.0+/bin/blastp \
+-db uniprot_Atha.fasta \
+-query test.faa \
+-outfmt 6 \
+> test.faa.blast
+
+vep@5dc71ff4216c:/data$ /home/vep/get_homologues/bin/ncbi-blast-2.16.0+/bin/blastx \
+-db uniprot_Atha.fasta \
+-query test.fna \
+-outfmt 6 \
+> test.fna.blast
+
+vep@5dc71ff4216c:/data$ wc -l test.faa.blast
+vep@5dc71ff4216c:/data$ wc -l test.fna.blast
+
+vep@5dc71ff4216c:/data$ cut -f 11 test.faa.blast | sort -g | head
+vep@5dc71ff4216c:/data$ cut -f 11 test.fna.blast | sort -g | head
+
+vep@5dc71ff4216c:/data$ cut -f 4 test.faa.blast | sort -nr | head
+vep@5dc71ff4216c:/data$ cut -f 4 test.fna.blast | sort -nr | head
+```
+## Results
+
+The `blastp` search produced **100 hits**, while the `blastx` search  
+produced **95 hits**, indicating a difference in the number of retrieved  
+alignments.
+
+Comparison of the lowest E-values showed that both searches retrieved  
+highly significant matches, including E-values equal to **0.0**.  
+However, slight differences were observed in subsequent E-values,  
+reflecting differences in alignment scoring between the two approaches.
+
+The longest alignment lengths also differed between the searches.  
+Both methods identified a maximum alignment length of **935 amino acids**,  
+but `blastx` produced fewer long alignments overall, with a sharper  
+drop in alignment length compared to `blastp`.
+
+## Interpretation and discussion
+
+Yes, **clear differences were observed** between the results retrieved by  
+`blastp` and `blastx`.
+
+The `blastp` search, which directly compares protein sequences, retrieved  
+a higher number of hits and more consistently long alignments.  
+This reflects the absence of translation-related constraints.
+
+In contrast, `blastx` translates the nucleotide query into six possible  
+reading frames before alignment. This process can reduce the number of  
+valid hits and affect alignment length and scoring, depending on the  
+correct reading frame and the presence of stop codons.
+
+Therefore, while both approaches successfully identify homologous  
+sequences, `blastp` provides more stable and comprehensive results when  
+a protein sequence is available, whereas `blastx` remains valuable when  
+only nucleotide sequences are provided.
+
+## References
+
+OpenAI ChatGPT – used for language refinement and data-driven  
+interpretation of BLAST search comparisons during Session 1, Exercise 4
+
+</details>
 
