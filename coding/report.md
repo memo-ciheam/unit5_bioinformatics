@@ -5,10 +5,12 @@
 <summary><strong>Exercise 1</strong></summary> 
  
 ## Question  
+
 **How many sequences have been formatted 
 and how does this affect the E-value of BLAST searches?**
 
 ## Objective
+
 The aim of this exercise was to prepare a protein sequence collection  
 for BLAST searches.
 
@@ -18,20 +20,28 @@ with particular emphasis on the E-value.
 
 ## Commands used  
 
-First, the compressed UniProt protein dataset was decompressed:
+```bash
+(base) mehmetsonmez@MEMO:~$ docker start -ai bioinfo_iamz
 
-```bash
-gunzip uniprot_Atha.fasta.gz
+vep@5dc71ff4216c:/home/vep$ cd /home/vep/test_data
+
+vep@5dc71ff4216c:/home/vep/test_data$ ls
+
+vep@5dc71ff4216c:/home/vep/test_data$ cp uniprot_Atha.fasta.gz /data/
+
+vep@5dc71ff4216c:/home/vep/test_data$ cd /data
+
+vep@5dc71ff4216c:/data$ ls
+
+vep@5dc71ff4216c:/data$ gunzip uniprot_Atha.fasta.gz
+
+vep@5dc71ff4216c:/data$ ls
+
+vep@5dc71ff4216c:/data$ /home/vep/get_homologues/bin/ncbi-blast-2.16.0+/bin/makeblastdb \
+-dbtype prot \
+-in uniprot_Atha.fasta
+
 ```
-Then, the protein FASTA file was formatted as a BLAST database 
-using the makeblastdb command:
-```bash
-/home/vep/get_homologues/bin/ncbi-blast-2.16.0+/bin/makeblastdb \
-  -dbtype prot \
-  -in uniprot_Atha.fasta
-```
-This command creates all the index files required by BLAST to
-efficiently search protein sequences.
 
 ## Results
 
@@ -64,19 +74,12 @@ small database.
 
 ## Difficulties encountered
 
-The main difficulty encountered during this exercise was related to the
-execution environment. The BLAST software was installed inside a Docker
-container, but the makeblastdb executable was not available in the 
-default system PATH. As a result, the correct absolute path to the 
-BLAST binaries had to be identified before the command could be executed
-successfully.
+No difficulties
 
 ## References
 
 BLAST Help Manual – E-value definition
 https://blast.ncbi.nlm.nih.gov/doc/blast-help/FAQ.html
-
-(visited 15/12/2025)
 
 OpenAI ChatGPT – used for language refinement and conceptual 
 clarification of BLAST E-value interpretation
