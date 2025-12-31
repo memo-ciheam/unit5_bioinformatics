@@ -309,3 +309,134 @@ interpretation of BLAST search comparisons during Session 1, Exercise 4
 
 </details>
 
+<details>
+<summary><strong>🔴 Exercise 5</strong></summary>
+
+## Question
+
+**Can you explain the contents of the output file `profile.out`?**
+
+## Objective
+
+The objective of this exercise was to generate a sequence profile using  
+PSI-BLAST and to interpret the contents of the resulting output file  
+`profile.out`.
+
+In particular, the aim was to understand how evolutionary information  
+from multiple sequence alignments is encoded in a Position-Specific  
+Scoring Matrix (PSSM).
+
+## Commands used
+
+```bash
+
+vep@5dc71ff4216c:/home/vep$ cd /home/vep/test_data
+vep@5dc71ff4216c:/home/vep/test_data$ cp test.faa /data/
+vep@5dc71ff4216c:/home/vep/test_data$ cd /data
+vep@5dc71ff4216c:/data$ ls
+vep@5dc71ff4216c:/data$ /home/vep/get_homologues/bin/ncbi-blast-2.16.0+/bin/psiblast \
+-db uniprot_Atha.fasta \
+-query test.faa \
+-num_iterations 3 \
+-out_ascii_pssm profile.out
+
+vep@5dc71ff4216c:/data$ find /home/vep -name psiblast 2>/dev/null
+vep@5dc71ff4216c:/data$ ls /home/vep/get_homologues/bin/ncbi-blast-2.16.0+/bin
+vep@5dc71ff4216c:/data$ apt-get update
+
+root@5dc71ff4216c:/data# which psiblast
+root@5dc71ff4216c:/data# psiblast -version
+
+root@5dc71ff4216c:/data# psiblast \
+-db uniprot_Atha.fasta \
+-query test.faa \
+-num_iterations 3 \
+-out_ascii_pssm profile.out
+
+root@5dc71ff4216c:/data# ls profile.out
+root@5dc71ff4216c:/data# head -n 10 profile.out
+root@5dc71ff4216c:/data# sed -n '20,35p' profile.out
+```
+## Results
+
+The PSI-BLAST search successfully generated the file `profile.out`,
+which contains the final position-specific scoring matrix computed
+after three iterations.
+
+The header of the file indicates that the matrix was built using the
+BLOSUM62 substitution matrix, with gap penalties set to an existence
+cost of 11 and an extension cost of 1.
+
+The main body of the file consists of a table where each row corresponds
+to a position in the query protein sequence, and each column corresponds
+to one of the 20 standard amino acids.
+
+For each position, the file reports:
+
+- Position index and query amino acid  
+- Position-specific substitution scores for all amino acids  
+- Weighted observed amino acid frequencies  
+- Information content per position  
+- Relative weight of observed matches versus pseudocounts  
+
+## Interpretation and discussion
+
+The file `profile.out` represents a Position-Specific Scoring Matrix (PSSM),
+which captures evolutionary constraints at each position of the protein.
+
+High positive scores for specific amino acids at a given position
+indicate strong conservation, suggesting functional or structural
+importance. Conversely, negative scores reflect substitutions that are
+less frequently observed among homologous sequences.
+
+The observed amino acid frequencies provide insight into how often each
+residue appears at a given position across all sequences included in
+the PSI-BLAST iterations. Positions with high information content
+correspond to highly conserved regions, while lower values indicate
+more variable regions.
+
+Overall, the PSSM integrates information from multiple homologous
+sequences and enables the detection of distant homologs that may not
+be identified using standard pairwise BLAST searches.
+
+## Difficulties encountered
+
+During this exercise, several difficulties were encountered related to
+the execution environment and software availability.
+
+Initially, the `psiblast` executable could not be found using the path
+provided in the exercise instructions. The BLAST installation available
+inside the Docker container did not include `psiblast` in the expected
+directory (`ncbi-blast-2.16.0+/bin`).
+
+To resolve this issue, multiple approaches were tested, including
+searching for the executable within the container file system and
+attempting to update or install additional packages. These attempts
+highlighted permission limitations when working inside the container.
+
+Eventually, `psiblast` was located in `/usr/bin/psiblast`, indicating
+that PSI-BLAST was installed system-wide but not bundled with the local
+BLAST binaries used earlier in the session. After switching to the
+correct executable path and running the command as the root user, the
+PSI-BLAST analysis completed successfully and produced the expected
+`profile.out` file.
+
+This process emphasized the importance of verifying executable paths
+and understanding differences between bundled software distributions
+and system-level installations within containerized environments.
+
+
+## References
+
+BLAST Help Manual – PSI-BLAST and PSSM  
+https://blast.ncbi.nlm.nih.gov/doc/blast-help/FAQ.html  
+
+NCBI PSI-BLAST Documentation  
+https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins  
+
+OpenAI ChatGPT – used for language refinement and interpretation  
+of PSI-BLAST PSSM output during Session 1, Exercise 5
+
+</details>
+
+
