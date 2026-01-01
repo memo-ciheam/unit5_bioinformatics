@@ -799,7 +799,3 @@ https://www.uniprot.org/
 
 </details>
 
-
-
-</details>
-
