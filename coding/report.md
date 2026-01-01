@@ -939,3 +939,71 @@ https://www.uniprot.org/
 
 </details>
 
+<details>
+<summary><strong>🔴 Exercise 10</strong></summary>
+
+## Question
+
+**Choose from the available options and model the structure of one of the sequences obtained in Exercise 5.  
+Save a screen capture of your model and a table with associated quality scores.**
+
+---
+
+## Results
+
+The three-dimensional structure of the protein selected in **Exercise 5** was obtained using the
+**AlphaFold Protein Structure Database**, which provides precomputed AlphaFold2 models.
+
+The analyzed protein corresponds to the sequence **AT1G30330.2**, identified as
+**Auxin response factor 6 (ARF6)** from *Arabidopsis thaliana*.
+This sequence maps to the reviewed UniProt entry **Q9ZTX8**.
+
+A screen capture of the AlphaFold-predicted structure is shown below.
+
+![AlphaFold model of ARF6](../images/exe10_ARF6_alphafold.png)
+
+The predicted structure shows a mixture of well-defined folded regions and extended
+low-confidence regions, which is typical for transcription factors containing
+intrinsically disordered segments.
+
+---
+
+## Model quality scores
+
+| Quality metric | Value |
+|----------------|-------|
+| UniProt ID | Q9ZTX8 |
+| Protein name | Auxin response factor 6 (ARF6) |
+| Organism | *Arabidopsis thaliana* |
+| Sequence length | 935 amino acids |
+| Average pLDDT | ~62 (low confidence) |
+| High-confidence regions | DNA-binding domain |
+| Low-confidence regions | Intrinsically disordered regions |
+| Experimental structures | None available |
+
+The relatively low average pLDDT score is consistent with the presence of
+intrinsically disordered regions, which are common in transcription factors
+involved in regulatory and signaling processes.
+
+---
+
+## Difficulties encountered
+
+Due to the lack of experimentally determined structures for ARF6 in the PDB,
+the analysis relied exclusively on **precomputed AlphaFold models**.
+No additional structure prediction was performed.
+
+---
+
+## References
+
+AlphaFold Protein Structure Database  
+https://alphafold.ebi.ac.uk/entry/Q9ZTX8  
+
+UniProtKB – Q9ZTX8 (ARF6_ARATH)  
+https://www.uniprot.org/uniprot/Q9ZTX8  
+
+</details>
+
+
+
