@@ -664,6 +664,142 @@ https://alphafold.ebi.ac.uk
 
 OpenAI ChatGPT – used for language refinement and structuring  
 of the report during Session 1, Exercise 7
+<details>
+<details>
+<summary><strong>🔴 Exercise 9</strong></summary>
+
+## Question and Results
+
+---
+
+### Question 1
+
+Search for the GO terms and the functional categories of the following GO IDs:  
+GO:0009414, GO:0035618, GO:0016491.
+
+**Answer:**
+
+**GO:0009414**  
+- GO term: response to water deprivation  
+- Functional category: Biological Process (BP)
+
+**GO:0035618**  
+- GO term: root hair  
+- Functional category: Cellular Component (CC)
+
+**GO:0016491**  
+- GO term: oxidoreductase activity  
+- Functional category: Molecular Function (MF)
+
+---
+
+### Question 2
+
+What are the GO ID and the functional category corresponding to photosynthesis?
+
+**Answer:**
+
+- GO term: photosynthesis  
+- GO ID: GO:0015979  
+- Functional category: Biological Process (BP)
+
+---
+
+### Question 3
+
+What are the immediate parent(s) and children of the photosynthesis GO term?
+
+**Answer:**
+
+**Immediate parent:**  
+- GO:0008152 – metabolic process
+
+**Immediate children:**  
+- GO:0009521 – photosystem  
+- GO:1905156 – negative regulation of photosynthesis  
+- GO:1905157 – positive regulation of photosynthesis  
+- GO:0034357 – photosynthetic membrane  
+- GO:0019685 – photosynthesis, dark reaction
+
+---
+
+### Question 4
+
+Search for the GO annotation terms of the following proteins:  
+A0A068LKP4, A0A097PR28, A0A059Q6N8.  
+What do you observe?
+
+**Answer:**
+
+- **A0A068LKP4 (Arabidopsis thaliana):**  
+  **No specific GO annotations are available.** The protein is an unreviewed TrEMBL entry with low annotation coverage.
+
+- **A0A097PR28 (Prunus persica):**  
+  **Several GO annotations are present** across Molecular Function, Biological Process and Cellular Component categories, all supported by electronic evidence (IEA).
+
+- **A0A059Q6N8 (Zea mays):**  
+  **Multiple GO annotations related to photosynthesis and chloroplast structures are present**, showing a coherent functional profile.
+
+---
+
+### Question 5
+
+How many gene products are involved in leaf development?  
+Give the GO ID corresponding to this term.
+
+**Answer:**
+
+- GO term: leaf development  
+- GO ID: GO:0048366  
+- Number of gene products: 21,804
+
+---
+
+### Question 6
+
+How many proteins of Arabidopsis thaliana, Prunus persica and Zea mays are assigned to the leaf development GO term?
+
+**Answer:**
+
+- Arabidopsis thaliana: 352 proteins  
+- Prunus persica: 57 proteins  
+- Zea mays: 82 proteins
+
+---
+
+### Question 7
+
+Check the total number of Biological Process (BP) annotations and proteins supported by experimental evidence codes in both Arabidopsis thaliana and Prunus persica.
+
+**Answer:**
+
+- **Arabidopsis thaliana:**  
+  - BP annotations: 26,739  
+  - BP proteins: 7,823
+
+- **Prunus persica:**  
+  - BP annotations: 3  
+  - BP proteins: 2
+
+---
+
+## Difficulties encountered
+
+Some difficulties were encountered when interpreting QuickGO outputs, particularly in distinguishing between annotations and distinct gene products, applying correct evidence code filters, and performing taxon-specific queries. Careful filter selection was required to avoid overcounting and to ensure that only experimentally supported annotations were retrieved.
+
+---
+
+## References
+
+Gene Ontology Consortium – QuickGO  
+https://www.ebi.ac.uk/QuickGO/
+
+UniProt Knowledgebase  
+https://www.uniprot.org/
+
+</details>
+
+
 
 </details>
 
