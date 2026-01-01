@@ -615,18 +615,7 @@ similar sequences.
 
 ### Table 1. Domains identified by HHPred (PDB and Pfam matches)
 
-| Source | Database ID | Description |
-|------|------------|-------------|
-| PDB | 4LDU_A | Auxin response factor 5 |
-| PDB | 4LDV_A | Auxin response factor 1 |
-| PDB | 8OJ2_A | Auxin response factor |
-| Pfam | PF06507.19 | ARF ancillary domain (ARF_AD) |
-| PDB | 4CHK_H | PB1 domain of Auxin response factor 5 |
-| PDB | 6L5K_A | Auxin response factor 5 |
-| PDB | 2M1M_A | Auxin-induced protein IAA4 |
-| PDB | 4NJ6_I | Auxin response factor 7 |
-| Pfam | PF25313.1 | BRWD/PHIP ancillary domain-like |
-| Pfam | PF09217.15 | EcoRII-N terminal domain |
+![HHPred results](images/exe7_hhpred.png)
 
 These domains were defined exclusively by the boundaries and annotations of  
 the matched PDB and Pfam entries reported by HHPred.
@@ -635,14 +624,7 @@ the matched PDB and Pfam entries reported by HHPred.
 
 ### Table 2. Structurally similar proteins identified in AlphaFoldDB
 
-| AlphaFoldDB ID | Protein name | Species |
-|--------------|-------------|---------|
-| AFDB:Q9ZTX8 | Auxin response factor 6 (ARF6) | Arabidopsis thaliana |
-| AFDB:A0A8T2GKV4 | Auxin response factor | Arabidopsis thaliana × Arabidopsis arenosa |
-| AFDB:A0A654EE38 | Auxin response factor | Arabidopsis thaliana |
-| AFDB:A0A8T2HB63 | Auxin response factor | Arabidopsis suecica |
-| AFDB:R0GUI5 | Auxin response factor | Capsella rubella |
-| AFDB:A0A087GC94 | Auxin response factor | Arabis alpina |
+![AlphaFoldDB results](images/exe7_alphafold.png)
 
 These entries represent proteins with high structural similarity to ARF6,  
 based on AlphaFoldDB predictions.
