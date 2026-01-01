@@ -664,7 +664,7 @@ https://alphafold.ebi.ac.uk
 
 OpenAI ChatGPT – used for language refinement and structuring  
 of the report during Session 1, Exercise 7
-<details>
+</details>
 <details>
 <summary><strong>🔴 Exercise 9</strong></summary>
 
