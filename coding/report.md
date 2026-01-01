@@ -991,14 +991,6 @@ involved in regulatory and signaling processes.
 
 ---
 
-## Difficulties encountered
-
-Due to the lack of experimentally determined structures for ARF6 in the PDB,
-the analysis relied exclusively on **precomputed AlphaFold models**.
-No additional structure prediction was performed.
-
----
-
 ## References
 
 AlphaFold Protein Structure Database  
