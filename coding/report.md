@@ -797,19 +797,33 @@ https://www.ebi.ac.uk/QuickGO/
 UniProt Knowledgebase  
 https://www.uniprot.org/
 
+
 ### Screenshots
 
+
 ![QuickGO – GO ID search results](../images/11.png)
+
 ![QuickGO – photosynthesis GO term](../images/12.png)
+
 ![QuickGO – photosynthesis hierarchy](../images/13.png)
+
 ![QuickGO – protein GO annotations](../images/14.png)
+
 ![QuickGO – leaf development GO term](../images/15.png)
+
 ![QuickGO – Arabidopsis statistics](../images/16.png)
+
 ![QuickGO – Prunus statistics](../images/17.png)
+
 ![QuickGO – Zea mays statistics](../images/18.png)
+
 ![QuickGO – BP experimental evidence filter](../images/19.png)
+
 ![QuickGO – Arabidopsis BP experimental statistics](../images/20.png)
+
 ![QuickGO – Prunus BP experimental statistics](../images/21.png)
+
 ![QuickGO – summary view](../images/22.png)
+
 </details>
 
