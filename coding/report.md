@@ -745,32 +745,28 @@ strongly related to **plant development** and **hormone-mediated responses**,
 particularly **auxin signaling**, which is consistent with its classification
 within the Auxin Response Factor (ARF) family.
 
-The restriction to one-to-one orthologues ensures that the functional transfer
-is based on high-confidence evolutionary relationships and avoids potential
-misannotation due to paralogous sequences.
-
 ---
 
 ## Difficulties encountered
 
-The main difficulty encountered during this exercise was the interpretation of
-the eggNOG-mapper output tables, which contain multiple hierarchical orthology
-groups and an extensive list of GO terms. Careful inspection was required to
-select the most specific and biologically relevant orthology group and to
-summarize the GO annotations without overinterpretation.
+Due to the inability to access the eggNOG-mapper web server
+(http://eggnog-mapper.embl.de/
+), the entire annotation process was carried out
+using the Galaxy Europe platform (https://usegalaxy.eu/).
 
 ---
 
 ## References
-
-eggNOG-mapper documentation  
-http://eggnog-mapper.embl.de/
 
 Galaxy Europe  
 https://usegalaxy.eu/
 
 Gene Ontology Consortium  
 http://geneontology.org/
+
+### Screenshots
+
+
 
 </details>
 
