@@ -958,9 +958,11 @@ The analyzed protein corresponds to the sequence **AT1G30330.2**, identified as
 **Auxin response factor 6 (ARF6)** from *Arabidopsis thaliana*.
 This sequence maps to the reviewed UniProt entry **Q9ZTX8**.
 
-A screen capture of the AlphaFold-predicted structure is shown below.
+![AlphaFold summary and average pLDDT score for ARF6](../images/exe10_25.png)
 
-![AlphaFold model of ARF6](../images/exe10_ARF6_alphafold.png)
+![AlphaFold entry page for Auxin response factor 6 (ARF6)](../images/exe10_26.png)
+
+![AlphaFold 3D structure prediction and PAE plot for ARF6](../images/exe10_27.png)
 
 The predicted structure shows a mixture of well-defined folded regions and extended
 low-confidence regions, which is typical for transcription factors containing
