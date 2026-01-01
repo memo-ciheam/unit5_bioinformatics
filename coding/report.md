@@ -615,7 +615,7 @@ similar sequences.
 
 ### Table 1. Domains identified by HHPred (PDB and Pfam matches)
 
-![HHPred results](images/exe7_hhpred.png)
+![HHPred results](../images/exe7_hhpred.png)
 
 These domains were defined exclusively by the boundaries and annotations of  
 the matched PDB and Pfam entries reported by HHPred.
@@ -624,7 +624,7 @@ the matched PDB and Pfam entries reported by HHPred.
 
 ### Table 2. Structurally similar proteins identified in AlphaFoldDB
 
-![AlphaFoldDB results](images/exe7_alphafold.png)
+![AlphaFoldDB results](../images/exe7_alphafold.png)
 
 These entries represent proteins with high structural similarity to ARF6,  
 based on AlphaFoldDB predictions.
