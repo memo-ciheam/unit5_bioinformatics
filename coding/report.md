@@ -764,8 +764,14 @@ https://usegalaxy.eu/
 Gene Ontology Consortium  
 http://geneontology.org/
 
+---
+
 ### Screenshots
 
+
+![eggNOG-mapper annotations table – functional description and GO terms](../images/23.png)
+
+![eggNOG-mapper annotations table – eggNOG orthology groups](../images/24.png)
 
 
 </details>
