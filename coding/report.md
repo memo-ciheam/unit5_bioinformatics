@@ -665,6 +665,116 @@ https://alphafold.ebi.ac.uk
 OpenAI ChatGPT – used for language refinement and structuring  
 of the report during Session 1, Exercise 7
 </details>
+
+<details>
+<summary><strong>🔴 Exercise 8</strong></summary>
+
+## Question
+
+**What are the GO terms and eggNOG orthology groups of the protein AT1G30330.2?**
+
+The functional annotation was performed using **eggNOG-mapper**, restricting
+functional transfer to **one-to-one orthologues only**.
+
+---
+
+## Objective
+
+The objective of this exercise was to annotate the protein **AT1G30330.2**
+on orthology grounds by identifying its **eggNOG orthology group(s)** and
+associated **Gene Ontology (GO) terms**, using eggNOG-mapper with a strict
+one-to-one orthologue constraint.
+
+---
+
+## Tool used
+
+- eggNOG-mapper (Galaxy Europe instance)
+
+---
+
+## Results
+
+The eggNOG-mapper analysis produced two output files, from which the required
+information was extracted.
+
+### eggNOG orthology group
+
+Based on the **annotations** output, the protein belongs to the following
+orthology group:
+
+- **eggNOG orthology group:** 3GC0T  
+- **Taxonomic level:** Streptophyta
+
+### GO terms
+
+The following GO terms were retrieved from the **annotations** table and
+summarized according to their functional category.
+
+**Molecular Function (MF):**
+- GO:0003700 – DNA-binding transcription factor activity
+- GO:0003674 – molecular function
+- GO:0140110 – transcription regulator activity
+
+**Biological Process (BP):**
+- GO:0006355 – regulation of transcription, DNA-templated
+- GO:0010468 – regulation of gene expression
+- GO:0009719 – response to endogenous stimulus
+- GO:0009725 – response to hormone
+- GO:0009733 – response to auxin
+- GO:0048856 – anatomical structure development
+- GO:0048731 – system development
+- GO:0032502 – developmental process
+- GO:0022414 – reproductive process
+
+**Cellular Component (CC):**
+- GO:0005634 – nucleus
+- GO:0005622 – intracellular
+- GO:0005623 – cell
+- GO:0043226 – organelle
+- GO:0043227 – membrane-bounded organelle
+
+---
+
+## Interpretation and discussion
+
+The functional annotation of AT1G30330.2 based on one-to-one orthology indicates
+that this protein is a **DNA-binding transcription factor** involved in the
+**regulation of gene expression**. The associated biological processes are
+strongly related to **plant development** and **hormone-mediated responses**,
+particularly **auxin signaling**, which is consistent with its classification
+within the Auxin Response Factor (ARF) family.
+
+The restriction to one-to-one orthologues ensures that the functional transfer
+is based on high-confidence evolutionary relationships and avoids potential
+misannotation due to paralogous sequences.
+
+---
+
+## Difficulties encountered
+
+The main difficulty encountered during this exercise was the interpretation of
+the eggNOG-mapper output tables, which contain multiple hierarchical orthology
+groups and an extensive list of GO terms. Careful inspection was required to
+select the most specific and biologically relevant orthology group and to
+summarize the GO annotations without overinterpretation.
+
+---
+
+## References
+
+eggNOG-mapper documentation  
+http://eggnog-mapper.embl.de/
+
+Galaxy Europe  
+https://usegalaxy.eu/
+
+Gene Ontology Consortium  
+http://geneontology.org/
+
+</details>
+
+
 <details>
 <summary><strong>🔴 Exercise 9</strong></summary>
 
