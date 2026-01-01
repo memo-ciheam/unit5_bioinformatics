@@ -649,10 +649,8 @@ functional annotation of AT1G30330.2.
 
 ## Difficulties encountered
 
-No conceptual difficulties were encountered during this exercise.  
-However, the analysis required careful separation of domain annotations  
-(PDB and Pfam) from structural similarity results (AlphaFoldDB), as these  
-represent distinct but complementary sources of information.
+This exercise relied heavily on the use of external web-based tools and their specific application procedures.
+As these tools were demonstrated only at a conceptual level during the course and no hands-on examples were provided, extensive assistance from ChatGPT was required to correctly navigate the web interfaces, interpret the outputs, and organize the results in a structured and reproducible way.
 
 ---
 
