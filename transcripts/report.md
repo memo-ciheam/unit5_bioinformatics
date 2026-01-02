@@ -257,6 +257,7 @@ correlation = 0.66
 p-value = 3e-04
 
 ```
+![Module–trait relationships heat map for W dataset](../images/5.png)
 
 
 </details>
