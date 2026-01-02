@@ -69,5 +69,8 @@ Key outputs for reporting and downstream analysis:
 ## References
 - CIHEAM Zaragoza bioinformatics materials: https://eead-csic-compbio.github.io/bioinformatics  
 - Practical WGCNA script: https://github.com/eead-csic-compbio/bioinformatics/blob/main/coexp/Practical_WGCNA_W_dataset.Rmd
+- OpenAI ChatGPT – used for language refinement and clarification  
+of BLAST output redirection during Session 3
+
 
 </details>
