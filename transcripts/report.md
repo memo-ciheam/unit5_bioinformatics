@@ -45,7 +45,9 @@ Sample clustering dendrogram
 ### 2) Construction of the gene/isoform co-expression network
 
 **Where:** RStudio
+
 **Method:** WGCNA adjacency and TOM calculation
+
 
 An appropriate soft-thresholding power was selected based on the scale-free topology criterion.
 Using the selected power, a weighted gene/isoform co-expression network was constructed.
