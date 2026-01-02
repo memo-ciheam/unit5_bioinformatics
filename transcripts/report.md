@@ -1,5 +1,8 @@
 # Session 3_Analysis of transcriptomes (W dataset)
 
+<summary><strong>🔴 Gene/isoform co-expression network construction and module identification in watered (W) RNA-seq samples using WGCNA</strong></summary>
+<details>
+
 ## Goal
 Construct a gene/isoform co-expression network using RNA-seq expression data from watered (W) samples and identify co-expression modules using WGCNA.
 
@@ -65,3 +68,5 @@ Key outputs for reporting and downstream analysis:
 ## References
 - CIHEAM Zaragoza bioinformatics materials: https://eead-csic-compbio.github.io/bioinformatics  
 - Practical WGCNA script: https://github.com/eead-csic-compbio/bioinformatics/blob/main/coexp/Practical_WGCNA_W_dataset.Rmd
+
+</details>
