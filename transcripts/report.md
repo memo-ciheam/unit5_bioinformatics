@@ -38,8 +38,9 @@ The filtered expression matrix was saved for downstream analyses.
 **Generated files:**
 ```
 datExpr_W.RData
-Sample clustering dendrogram (exported figure)
+Sample clustering dendrogram 
 ```
+![W sample clustering to detect outliers](../images/dendrogram_W.png)
 
 ### 2) Construction of the gene/isoform co-expression network
 
@@ -64,6 +65,8 @@ Power selection plots
 Gene dendrogram based on TOM dissimilarity
 
 ```
+![Soft-threshold power selection for W dataset](../images/power_W.png)
+
 
 ### 3) Identification of co-expression modules
 
@@ -94,13 +97,7 @@ net_W.RData
 Module dendrograms (before and after merging)
 Genes_per_module_W.tsv
 ```
-### Files included in the repository (Session 3)
-```
-transcripts/report.md
-transcripts/Practical_WGCNA_W_dataset.Rmd
-transcripts/figures/ (sample dendrograms, power plots, module dendrograms)
-Output tables and RData files (optional, depending on file size)
-```
+![Gene dendrogram and module structure before and after merging (W dataset)](../images/modules_W.png)
 
 ## References
 - CIHEAM Zaragoza bioinformatics materials: https://eead-csic-compbio.github.io/bioinformatics  
