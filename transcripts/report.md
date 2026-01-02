@@ -178,6 +178,44 @@ verbose = 5)
 
 </details>
 
+<details>
+<summary><strong>🔴 Exercise 3.4</strong></summary>
+
+## Question:
+**How many co-expression modules are established before and after the module merging process?**
+
+## Answer:
+Before the module merging step, **40 co-expression modules** were identified.  
+After merging highly similar modules based on eigengene correlation, the final network consisted of **36 co-expression modules**.
+
+Module merging was performed to reduce redundancy by combining modules with highly correlated module eigengenes.
+
+## Evidence (R output):
+
+```
+table(modulelabels_W)
+```
+**Merged modules = 36; original modules = 40**
+
+
+The module structure before and after merging is illustrated in the module dendrogram shown previously.
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
