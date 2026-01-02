@@ -7,64 +7,100 @@
 
 **Construct a gene/isoform co-expression network using RNA-seq expression data from watered (W) samples and identify co-expression modules using WGCNA.**
 
-## Data and scripts
-**Input files**
-- `TPM_counts_Drought_W_dataset.csv` (expression matrix in TPM)
-- `TRAITS_W.csv` (phenotypic traits for W samples)
+---
 
-**Script**
-- `Practical_WGCNA_W_dataset.Rmd`
+## Workflow summary 
 
-## Workflow summary (what was done)
+The analysis was performed using RNA-seq expression data from watered (W) samples following the WGCNA framework.  
+The terminal (Docker/WSL) was used only for environment setup and data organisation, while all network analyses were carried out in **RStudio**.
 
-### 1) Data import and formatting
-The TPM expression table was loaded in R and converted to an expression matrix suitable for WGCNA:
-- The first column contains isoform IDs (`target_id`).
-- Columns correspond to samples.
-- The dataset was transposed so that **rows = samples** and **columns = isoforms** (object `datExprW`).
+The workflow can be divided into three main stages.
 
-### 2) Filtering genes/samples (quality check)
-To remove problematic features, WGCNA’s quality-control function was applied:
-- `goodSamplesGenes(datExprW)` checks missing values and removes genes/samples with excessive missingness.
-- If any genes/samples failed QC, the matrix was subset to keep only valid ones.
+---
 
-### 3) Outlier detection and sample removal
-Outlier samples were detected by hierarchical clustering:
-- A sample dendrogram was built with `hclust(dist(datExprW), method="average")`.
-- A cut height was applied (`cutHeight = 300000`) to define the main sample cluster.
-- Only samples in the main cluster were retained (`keepSamplesW`), producing a filtered expression matrix saved as `datExpr_W.RData`.
+### 1) RNA-seq expression data preparation (W dataset)
 
-### 4) Soft-threshold power selection
-To build a scale-free-like network, a range of candidate powers was tested using:
-- `pickSoftThreshold(datExprW, powerVector=powers, networkType="unsigned")`
-The final power was chosen based on the scale-free topology fit criterion (R² threshold shown in the plot).
+**Where:** RStudio (Docker container, `/data/05_WGCNA`)  
+**Input file:** `TPM_counts_Drought_W_dataset.csv`
 
-### 5) Network construction (adjacency and TOM)
-Using the selected power:
-- Adjacency was computed: `adjacency(datExprW, power = chosen_power)`
-- Topological Overlap Matrix (TOM) was computed: `TOMsimilarity(adjacency)`
-- A TOM-based dissimilarity was derived (`1 - TOM`) and used to cluster isoforms.
+The RNA-seq expression matrix (TPM values) was loaded and reformatted to meet WGCNA requirements, with samples in rows and isoforms in columns.
 
-### 6) Module identification
-Co-expression modules were detected using dynamic tree cutting:
-- `cutreeDynamic(...)` assigned each isoform to a module.
-- Modules were translated into colors (`labels2colors`) to label module membership.
-A dendrogram with module colors was generated to visualize module structure.
+```
+W_dataset <- read.csv("TPM_counts_Drought_W_dataset.csv")
+datExprW  <- as.data.frame(t(W_dataset[, -1]))
+colnames(datExprW) <- W_dataset$target_id
+rownames(datExprW) <- colnames(W_dataset)[-1]
+```
+Quality control was applied to remove genes or samples with excessive missing values.
+Outlier samples were identified using hierarchical clustering, and only samples belonging to the main cluster were retained.
+The filtered expression matrix was saved for downstream analyses.
 
-### 7) Module eigengenes and module merging
-For each module, an eigengene (ME) was calculated:
-- `moduleEigengenes(datExprW, colors=modulecolors_W)`
-Highly similar modules were merged:
-- Eigengene dissimilarity was computed and clustered.
-- Modules were merged using `mergeCloseModules(..., cutHeight = 0.25)`.
-This produced the final merged module set and updated eigengenes.
+**Generated files:**
+```
+datExpr_W.RData
+Sample clustering dendrogram (exported figure)
+```
 
-### 8) Outputs produced
-Key outputs for reporting and downstream analysis:
-- Filtered expression matrix: `datExpr_W.RData`
-- Network and modules: `net_W.RData`
-- Per-module gene/isoform lists: `Genes_per_module_W.tsv`
-- Module–trait association heatmap: `heatmap_traits_modules_W.pdf`
+### 2) Construction of the gene/isoform co-expression network
+
+**Where:** RStudio
+**Method:** WGCNA adjacency and TOM calculation
+
+An appropriate soft-thresholding power was selected based on the scale-free topology criterion.
+Using the selected power, a weighted gene/isoform co-expression network was constructed.
+
+```
+sftW <- pickSoftThreshold(datExprW, powerVector = powers, networkType = "unsigned")
+adjacency_W <- adjacency(datExprW, power = 6)
+TOM_W <- TOMsimilarity(adjacency_W)
+TOM_diss_W <- 1 - TOM_W
+```
+Genes/isoforms were hierarchically clustered using TOM-based dissimilarity, generating a network-driven gene dendrogram.
+
+**Generated files:**
+
+```
+Power selection plots
+Gene dendrogram based on TOM dissimilarity
+
+```
+
+### 3) Identification of co-expression modules
+
+**Where:** RStudio
+**Method:** Dynamic tree cut and module merging
+
+Co-expression modules were identified from the gene dendrogram using dynamic tree cutting and labelled using module colours.
+Module eigengenes were calculated, and highly similar modules were merged to obtain the final set of co-expression modules.
+
+```
+modules_W <- cutreeDynamic(
+  dendro = geneTree_W,
+  distM = TOM_diss_W,
+  deepSplit = 2,
+  minClusterSize = 30
+)
+modulecolors_W <- labels2colors(modules_W)
+
+merge_W <- mergeCloseModules(datExprW, modulecolors_W, cutHeight = 0.25)
+modulecolors_W <- merge_W$colors
+
+```
+The final network structure and module information were saved for downstream analyses.
+
+**Generated files:**
+```
+net_W.RData
+Module dendrograms (before and after merging)
+Genes_per_module_W.tsv
+```
+### Files included in the repository (Session 3)
+```
+transcripts/report.md
+transcripts/Practical_WGCNA_W_dataset.Rmd
+transcripts/figures/ (sample dendrograms, power plots, module dendrograms)
+Output tables and RData files (optional, depending on file size)
+```
 
 ## References
 - CIHEAM Zaragoza bioinformatics materials: https://eead-csic-compbio.github.io/bioinformatics  
