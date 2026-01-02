@@ -242,7 +242,7 @@ type = "unsigned"
 **According to the module–trait association heat map, which module has the highest positive correlation with the "blwgrd (below ground biomass)" trait?**
 
 ## Answer:
-The module showing the highest positive correlation with the **blwgrd (below ground biomass)** trait is the **violet module**.
+The module showing the highest positive correlation with the **blwgrd (below ground biomass)** trait is the **MEviolet**.
 
 The correlation between the violet module eigengene (MEviolet) and the blwgrd trait is **0.66**, with a statistically significant p-value (**p = 3e−04**).
 
@@ -250,16 +250,14 @@ The correlation between the violet module eigengene (MEviolet) and the blwgrd tr
 
 Module–trait correlations were calculated using Pearson correlation between module eigengenes and phenotypic traits, and visualized in a module–trait association heat map.
 
+**Highest positive correlation:**
 ```
-Highest positive correlation:
-
 MEviolet vs blwgrd
 correlation = 0.66
 p-value = 3e-04
 
 ```
 
-![Module–trait relationships heat map for W dataset](../images/heatmap_traits_modules_W.png)
 
 </details>
 
