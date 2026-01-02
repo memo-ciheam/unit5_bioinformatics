@@ -106,7 +106,7 @@ of BLAST output redirection during Session 3
 
 
 <details>
-<summary><strong>🔴 Exercise 3.1 – Number of samples and isoforms in the W RNA-seq dataset</strong></summary>
+<summary><strong>🔴 Exercise 3.1</strong></summary>
 
 ## Question: 
 **How many samples and isoforms are included in `TPM_counts_Drought_W_dataset.csv`?**
