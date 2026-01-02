@@ -202,6 +202,31 @@ The module structure before and after merging is illustrated in the module dendr
 
 </details>
 
+<details>
+<summary><strong>🔴 Exercise 3.5</strong></summary>
+
+## Question:
+**What is the hub isoform (or hub gene) of the cyan module?**
+
+## Answer:
+*(To be completed based on the WGCNA hub gene output for the cyan module.)*
+
+## Evidence (R output):
+
+The hub isoform for each module was identified using the `chooseTopHubInEachModule()` function, which selects the gene/isoform with the highest intramodular connectivity within each module.
+
+```
+hooseTopHubInEachModule(
+datExprW,
+modulecolors_W,
+omitColors = "grey",
+power = 6,
+type = "unsigned"
+)
+```
+
+</details>
+
 
 
 
