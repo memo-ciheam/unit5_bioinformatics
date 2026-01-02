@@ -150,10 +150,33 @@ nSamplesW
 
 </details>
 
+<details>
+<summary><strong>🔴 Exercise 3.3</strong></summary>
+
+## Question:
+**What power value have you set as appropriate for calculating adjacency?**
+
+## Answer:
+The selected soft-thresholding power value used to calculate the adjacency matrix was **power = 6**.
+
+This value was chosen based on the scale-free topology criterion evaluated using the `pickSoftThreshold()` function. The selected power corresponds to the lowest value at which the scale independence (signed R²) exceeds the predefined threshold (0.85), while maintaining adequate mean connectivity.
+
+## Evidence (R output and plot interpretation):
+
+The decision was supported by inspection of the scale independence and mean connectivity plots generated during the power selection step.
+
+```
+sftW <- pickSoftThreshold(datExprW,
+powerVector = powers,
+networkType = "unsigned",
+verbose = 5)
+
+```
 
 
+![Soft-threshold power selection for W dataset](../images/power_W.png)
 
-
+</details>
 
 
 
