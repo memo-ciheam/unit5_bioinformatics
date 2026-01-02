@@ -103,3 +103,38 @@ of BLAST output redirection during Session 3
 
 
 </details>
+
+
+<details>
+<summary><strong>🔴 Exercise 3.1 – Number of samples and isoforms in the W RNA-seq dataset</strong></summary>
+
+## Question: 
+**How many samples and isoforms are included in `TPM_counts_Drought_W_dataset.csv`?**
+
+**Answer:**  
+The file `TPM_counts_Drought_W_dataset.csv` contains **9,940 isoforms** and **39 watered (W) samples**.
+
+This information was obtained by inspecting the dimensions of the expression matrix after loading it into R. The dataset has 9,940 rows corresponding to isoforms and 40 columns in total, where the first column (`target_id`) contains isoform identifiers and the remaining 39 columns correspond to RNA-seq samples.
+
+**Evidence (R output):**
+
+```
+dim(W_dataset)
+[1] 9940 40
+```
+
+![Dimensions of the W RNA-seq expression dataset](../images/4.png)
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
