@@ -14,7 +14,7 @@
 The analysis was performed using RNA-seq expression data from watered (W) samples following the WGCNA framework.  
 The terminal (Docker/WSL) was used only for environment setup and data organisation, while all network analyses were carried out in **RStudio**.
 
-The workflow can be divided into three main stages.
+The workflow can be divided into **three main stages**.
 
 ---
 
@@ -37,8 +37,8 @@ The filtered expression matrix was saved for downstream analyses.
 
 **Generated files:**
 ```
-datExpr_W.RData
-Sample clustering dendrogram 
+- Filtered expression matrix (`datExpr_W.RData`)
+- Sample clustering dendrogram
 ```
 ![W sample clustering to detect outliers](../images/dendrogram_W.png)
 
@@ -46,11 +46,11 @@ Sample clustering dendrogram
 
 **Where:** RStudio
 
-**Method:** WGCNA adjacency and TOM calculation
+First, different soft-thresholding (power) values were tested using the `pickSoftThreshold()` function in order to approximate the scale-free topology assumption of WGCNA. 
+The goal was to select the lowest power value for which the “Scale independence (signed R²)” exceeded the predefined threshold (horizontal line at 0.85 in the plot). 
+Based on this criterion, **power = 6** was selected.
 
-
-An appropriate soft-thresholding power was selected based on the scale-free topology criterion.
-Using the selected power, a weighted gene/isoform co-expression network was constructed.
+Using this power value, correlation-based similarities between genes/isoforms were transformed into weighted network connections (adjacency). To obtain a more robust representation of network structure, the Topological Overlap Matrix (TOM) was calculated; TOM-based dissimilarity was subsequently used for module detection.
 
 ```
 sftW <- pickSoftThreshold(datExprW, powerVector = powers, networkType = "unsigned")
@@ -58,25 +58,18 @@ adjacency_W <- adjacency(datExprW, power = 6)
 TOM_W <- TOMsimilarity(adjacency_W)
 TOM_diss_W <- 1 - TOM_W
 ```
-Genes/isoforms were hierarchically clustered using TOM-based dissimilarity, generating a network-driven gene dendrogram.
 
-**Generated files:**
-
-```
-Power selection plots
-Gene dendrogram based on TOM dissimilarity
-
-```
 ![Soft-threshold power selection for W dataset](../images/power_W.png)
 
 
 ### 3) Identification of co-expression modules
 
 **Where:** RStudio
-**Method:** Dynamic tree cut and module merging
 
-Co-expression modules were identified from the gene dendrogram using dynamic tree cutting and labelled using module colours.
+Genes/isoforms were hierarchically clustered based on TOM dissimilarity, and co-expression modules were identified using the dynamic tree cut algorithm. 
 Module eigengenes were calculated, and highly similar modules were merged to obtain the final set of co-expression modules.
+
+The resulting gene dendrogram together with module colour assignment (before and after merging) is shown below.
 
 ```
 modules_W <- cutreeDynamic(
@@ -95,10 +88,11 @@ The final network structure and module information were saved for downstream ana
 
 **Generated files:**
 ```
-net_W.RData
-Module dendrograms (before and after merging)
-Genes_per_module_W.tsv
+- Network and module data (`net_W.RData`)
+- Module dendrograms before and after merging
+- Gene lists per module (`Genes_per_module_W.tsv`)
 ```
+
 ![Gene dendrogram and module structure before and after merging (W dataset)](../images/modules_W.png)
 
 ## References
