@@ -209,27 +209,31 @@ The module structure before and after merging is illustrated in the module dendr
 **What is the hub isoform (or hub gene) of the cyan module?**
 
 ## Answer:
-*(To be completed based on the WGCNA hub gene output for the cyan module.)*
+The hub isoform of the **cyan module** is **Bradi1g00700.3**.
+
+This isoform was identified as the gene with the highest intramodular connectivity within the cyan module, using the `chooseTopHubInEachModule()` function.
 
 ## Evidence (R output):
 
-The hub isoform for each module was identified using the `chooseTopHubInEachModule()` function, which selects the gene/isoform with the highest intramodular connectivity within each module.
+```
+cyan
+"Bradi1g00700.3"
 
 ```
-hooseTopHubInEachModule(
+
+The hub isoform was obtained by running:
+```
+chooseTopHubInEachModule(
 datExprW,
 modulecolors_W,
 omitColors = "grey",
 power = 6,
 type = "unsigned"
 )
+
 ```
 
 </details>
-
-
-
-
 
 
 
