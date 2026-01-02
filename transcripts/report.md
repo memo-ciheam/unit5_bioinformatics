@@ -98,9 +98,7 @@ The final network structure and module information were saved for downstream ana
 ## References
 - CIHEAM Zaragoza bioinformatics materials: https://eead-csic-compbio.github.io/bioinformatics  
 - Practical WGCNA script: https://github.com/eead-csic-compbio/bioinformatics/blob/main/coexp/Practical_WGCNA_W_dataset.Rmd
-- OpenAI ChatGPT – used for language refinement and clarification  
-of BLAST output redirection during Session 3
-
+- OpenAI ChatGPT 
 
 </details>
 
@@ -127,7 +125,30 @@ dim(W_dataset)
 
 </details>
 
+<details>
+<summary><strong>🔴 Exercise 3.2</strong></summary>
 
+## Question:
+**How many samples are discarded after outlier analysis?**
+
+## Answer:
+After outlier analysis, **13 samples were discarded**, and **26 samples were retained** for downstream analysis.
+
+Outlier detection was performed by hierarchical clustering of samples, followed by cutting the dendrogram at the predefined height. Samples assigned to cluster 1 were kept, while samples assigned to cluster 0 were considered outliers and removed.
+
+## Evidence (R output):
+```
+table(clustW)
+clustW
+0 1
+13 26
+
+nSamplesW
+[1] 26
+
+```
+
+</details>
 
 
 
