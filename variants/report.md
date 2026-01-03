@@ -163,6 +163,6 @@ https://samtools.github.io/hts-specs/
 OpenAI ChatGPT – used for language refinement and conceptual clarification
 Prompt-based assistance during Session 5, Exercise 2
 
-</details> ```
+</details>
 
 
