@@ -76,14 +76,15 @@ This pattern is observed in both Read 1 and Read 2 and is typical for Illumina s
 **Per-sequence quality scores – Read 1:**  
 ![Per-sequence quality – Read 1](../images/ex5.3.png)
 
-**Per-sequence quality scores – Read 2:**  
-![Per-sequence quality – Read 2](../images/ex5.7.png)
-
 **Read length distribution – Read 1:**  
 ![Read length distribution – Read 1](../images/ex5.4.png)
 
+**Per-sequence quality scores – Read 2:**  
+![Per-sequence quality – Read 2](../images/ex5.7.png)
+
 **Read length distribution – Read 2:**  
 ![Read length distribution – Read 2](../images/ex5.8.png)
+
 
 ---
 
