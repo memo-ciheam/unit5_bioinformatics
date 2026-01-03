@@ -1,7 +1,7 @@
 # Session 5 – Mapping, variant calling and variant filtering
 
 <details>
-<summary><strong>🔴 Exercise 1 – FASTQ data inspection and quality assessment</strong></summary>
+<summary><strong>🔴 Exercise 1</strong></summary>
 
 ---
 
@@ -107,7 +107,7 @@ Prompt-based assistance during Session 5, Exercise 1
 </details>
 
 <details>
-<summary><strong>🔴 Exercise 2 – Comparison of alignment file formats (SAM, BAM, CRAM)</strong></summary>
+<summary><strong>🔴 Exercise 2</strong></summary>
 
 ---
 
