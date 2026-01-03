@@ -106,3 +106,52 @@ Prompt-based assistance during Session 5, Exercise 1
 
 </details>
 
+<details>
+<summary><strong>🔴 Exercise 2 – Comparison of alignment file formats (SAM, BAM, CRAM)</strong></summary>
+
+---
+
+<details>
+<summary><strong>Exercise 2.1 – File size comparison of SAM, BAM and CRAM formats</strong></summary>
+
+### Question  
+Compare the different file sizes for each of the alignment files generated in the previous section (SAM, BAM and CRAM formats).
+
+### Answer  
+The same alignment was stored using three different formats: **SAM**, **BAM**, and **CRAM**.  
+The observed file sizes were markedly different:
+
+- **SAM**: largest file size  
+- **BAM**: smaller than SAM  
+- **CRAM**: smallest file size  
+
+This size reduction follows the expected order:
+
+**SAM > BAM > CRAM**
+
+SAM is a plain text format and therefore requires the most storage space.  
+BAM is the binary and compressed version of SAM, resulting in a substantial reduction in file size.  
+CRAM applies reference-based compression, achieving the highest level of compression among the three formats.
+
+### Interpretation  
+Binary compression (BAM) and reference-based compression (CRAM) significantly reduce storage requirements compared to plain-text SAM files.  
+CRAM is therefore the most storage-efficient format for long-term storage and large-scale sequencing projects, provided that the reference genome is available.
+
+</details>
+
+---
+
+### References
+
+SAM/BAM Format Specification  
+https://samtools.github.io/hts-specs/SAMv1.pdf  
+
+CRAM Format Specification  
+https://samtools.github.io/hts-specs/CRAMv3.pdf  
+
+OpenAI ChatGPT – used for language refinement and clarification of alignment file format differences  
+Prompt-based assistance during Session 5, Exercise 2
+
+</details>
+
+
