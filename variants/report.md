@@ -119,7 +119,7 @@ Prompt-based assistance during Session 5, Exercise 1
 ## Commands used
 
 ```bash
-# SAM output (stdout, not saved to disk)
+# SAM output 
 bwa mem reference.fna reads_1.fastq.gz reads_2.fastq.gz
 
 # BAM generation
