@@ -238,7 +238,8 @@ Prompt-based assistance during Session 5, Exercise 3
 
 <details>
 <summary><strong>🔴 Exercise 4</strong></summary>
-
+  
+<details>
 ## Exercise 4.1 – Exploring the IGV-Web application
 
 ### Question
