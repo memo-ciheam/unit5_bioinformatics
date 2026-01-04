@@ -238,9 +238,10 @@ Prompt-based assistance during Session 5, Exercise 3
 
 <details>
 <summary><strong>🔴 Exercise 4</strong></summary>
+  
 ---  
 <details>
-<summary><strong>🔴 Exercise 4.1 – Accessing the IGV-Web application</strong></summary>
+<summary><strong>Exercise 4.1 – Accessing the IGV-Web application</strong></summary>
 
 ## Question
 
@@ -269,4 +270,3 @@ IGV-Web supports loading local genomic files (e.g. FASTA, BAM, VCF, GTF) directl
 ![IGV citation information](../images/ex4.1.3.png)
 
 </details>
----
