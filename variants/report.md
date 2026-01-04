@@ -93,6 +93,18 @@ This pattern is observed in both Read 1 and Read 2 and is typical for Illumina s
 The FASTQ files correspond to high-quality paired-end Illumina sequencing data.  
 The observed quality decay toward read ends is expected and does not compromise downstream mapping and variant calling.
 
+### References
+
+Andrews, S. (2010).
+FastQC: A Quality Control Tool for High Throughput Sequence Data.
+https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+
+Illumina, Inc.
+FASTQ File Format and Quality Scores.
+https://www.illumina.com/science/technology/next-generation-sequencing/plan-experiments/quality-scores.html
+
+OpenAI ChatGPT – used for language refinement and conceptual clarification of FASTQ format, paired-end sequencing, and quality score interpretation
+Prompt-based assistance during Session 5, Exercise 1
 
 </details>
 
@@ -337,9 +349,6 @@ gene annotation file is compatible with the loaded reference genome
 transcript structures to be interpreted in the context of read alignments and
 variant positions in subsequent steps.
 
----
-
-</details>
 ---
 
 ### References
