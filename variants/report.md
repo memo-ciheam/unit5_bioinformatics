@@ -274,7 +274,7 @@ IGV-Web supports loading local genomic files (e.g. FASTA, BAM, VCF, GTF) directl
 ---
 
 <details>
-<summary><strong>🔴 Exercise 4.2 – Loading the reference genome in IGV</strong></summary>
+<summary><strong>Exercise 4.2 – Loading the reference genome in IGV</strong></summary>
 
 ## Question
 
