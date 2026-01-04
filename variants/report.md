@@ -93,16 +93,6 @@ This pattern is observed in both Read 1 and Read 2 and is typical for Illumina s
 The FASTQ files correspond to high-quality paired-end Illumina sequencing data.  
 The observed quality decay toward read ends is expected and does not compromise downstream mapping and variant calling.
 
-### References
-
-FastQC Documentation – Quality control for high throughput sequence data
-https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
-
-Illumina Sequencing Technology – Sequencing by synthesis overview
-https://www.illumina.com/science/technology/next-generation-sequencing/sequencing-technology.html
-
-OpenAI ChatGPT – used for language refinement and conceptual clarification of FASTQ format and FastQC quality assessment
-Prompt-based assistance during Session 5, Exercise 1
 
 </details>
 
@@ -308,5 +298,12 @@ Chromosome 10 could be selected, and the genomic coordinate range
 
 This step establishes the genomic coordinate system required for downstream visualization.
 No read alignments or annotations are displayed at this stage; those are loaded in subsequent steps.
+
+</details>
+
+### References
+
+OpenAI ChatGPT – used for language refinement and conceptual clarification of FASTQ format and FastQC quality assessment
+Prompt-based assistance during Session 5
 
 </details>
