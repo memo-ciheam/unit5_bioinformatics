@@ -301,9 +301,51 @@ No read alignments or annotations are displayed at this stage; those are loaded 
 
 </details>
 
+---
+
+<details>
+<summary><strong>Exercise 4.3 – Loading gene annotation (GTF)</strong></summary>
+
+## Question
+
+**Load the gene annotation GTF file with the Tracks → Local File option.**
+
+---
+
+## Action performed
+
+The gene annotation file (`annotation.gtf`) was loaded into IGV using the  
+**Tracks → Local File** option.
+
+The annotation track was displayed across chromosome 10, showing gene models
+distributed along the reference genome. Gene structures are represented as
+blocks and connecting lines, corresponding to exons and introns.
+
+---
+
+## Evidence
+
+![IGV gene annotation loaded](../images/ex4.3.1.png)
+
+---
+
+## Interpretation
+
+The successful visualization of the `annotation.gtf` track confirms that the
+gene annotation file is compatible with the loaded reference genome
+(`reference.fna`). This allows genomic features such as genes, exons, and
+transcript structures to be interpreted in the context of read alignments and
+variant positions in subsequent steps.
+
+---
+
+</details>
+---
+
 ### References
 
 OpenAI ChatGPT – used for language refinement and conceptual clarification of FASTQ format and FastQC quality assessment
-Prompt-based assistance during Session 5
+Prompt-based assistance during Session 5, Exercise 4
+
 
 </details>
