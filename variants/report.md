@@ -270,3 +270,43 @@ IGV-Web supports loading local genomic files (e.g. FASTA, BAM, VCF, GTF) directl
 ![IGV citation information](../images/ex4.1.3.png)
 
 </details>
+
+---
+
+<details>
+<summary><strong>🔴 Exercise 4.2 – Loading the reference genome in IGV</strong></summary>
+
+## Question
+
+**Load the reference FASTA and index files with the Genome → Local File option.**
+
+---
+
+## Procedure
+
+The reference genome was loaded into IGV using the **Genome → Local File** option.
+Both the FASTA file and its index were selected simultaneously:
+
+- `reference.fna`
+- `reference.fna.fai`
+
+Loading both files allows IGV to correctly recognize chromosome names and genomic coordinates.
+
+---
+
+## Result
+
+After loading the reference genome, chromosome-level navigation became available in IGV.
+Chromosome 10 could be selected, and the genomic coordinate range  
+`chr10:1–23,207,287` was displayed, confirming that the reference genome was successfully loaded.
+
+![IGV reference genome loaded](../images/ex4.2.1.png)
+
+---
+
+## Interpretation
+
+This step establishes the genomic coordinate system required for downstream visualization.
+No read alignments or annotations are displayed at this stage; those are loaded in subsequent steps.
+
+</details>
