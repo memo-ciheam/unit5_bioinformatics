@@ -390,6 +390,54 @@ Together, these files allow efficient visualization of read coverage and alignme
 
 </details>
 
+<details>
+<summary><strong>Exercise 4.5 – Visualization of mapped reads in a specific genomic region</strong></summary>
+
+## Question
+
+**Go to the chr location 10:9,768,000–9,784,000 and zoom in to display the reads.**
+
+---
+
+## Procedure
+
+Using the IGV web application, the genomic coordinates  
+`chr10:9,768,000–9,784,000` were entered into the search bar.
+
+The view was zoomed in until individual aligned reads became visible.
+At this resolution, both the gene annotation track and the aligned sequencing
+reads could be clearly observed.
+
+---
+
+## Results
+
+At the selected genomic region, the following elements are visible:
+
+- Gene models from the **annotation.gtf** track, including exons and introns.
+- A dense coverage of aligned reads from the **SAMEA2569438.chr10.sorted.bam** file.
+- Mismatches between reads and the reference sequence, displayed as colored bases.
+- Local variation in read depth across the region.
+
+These observations confirm that the BAM file was correctly loaded and that the
+reads are properly mapped to chromosome 10.
+
+![IGV zoomed view of chr10 mapped reads](../images/ex4.5.1.png)
+
+---
+
+## Interpretation
+
+Zooming into a specific genomic interval allows direct visual inspection of
+read alignment quality, coverage depth, and potential sequence variation.
+The presence of consistent read coverage and correctly aligned reads across
+annotated genes indicates successful mapping and data integrity.
+
+---
+
+</details>
+
+
 ### References
 
 OpenAI ChatGPT – used for language refinement and conceptual clarification of FASTQ format and FastQC quality assessment
