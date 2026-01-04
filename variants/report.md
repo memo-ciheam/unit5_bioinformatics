@@ -390,6 +390,8 @@ Together, these files allow efficient visualization of read coverage and alignme
 
 </details>
 
+---
+
 <details>
 <summary><strong>Exercise 4.5 – Visualization of mapped reads in a specific genomic region</strong></summary>
 
@@ -437,6 +439,7 @@ annotated genes indicates successful mapping and data integrity.
 
 </details>
 
+---
 
 ### References
 
