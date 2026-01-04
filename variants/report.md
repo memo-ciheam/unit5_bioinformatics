@@ -353,10 +353,46 @@ variant positions in subsequent steps.
 
 </details>
 
+---
+
+<details>
+<summary><strong>Exercise 4.4 – Loading BAM alignments in IGV</strong></summary>
+
+## Question
+
+**Load the BAM and index files with sorted, mapped reads using the Tracks → Local File option.**
+
+---
+
+## Procedure
+
+The sorted BAM file containing mapped sequencing reads and its corresponding index file were loaded into IGV using the **Tracks → Local File** option.
+
+The following files were selected simultaneously:
+- `SAMEA2569438.chr10.sorted.bam`
+- `SAMEA2569438.chr10.sorted.bam.bai`
+
+---
+
+## Results
+
+After loading the BAM and BAI files, IGV displayed a coverage track for chromosome 10 together with the aligned reads track.
+At this zoom level, individual reads are not yet visible and IGV indicates that further zooming is required to inspect alignment details.
+
+![IGV BAM alignments loaded](../images/ex4.4.1.png)
+
+---
+
+## Interpretation
+
+The BAM file stores mapped sequencing reads in a compressed binary format, while the BAI index enables rapid access to specific genomic regions.
+Together, these files allow efficient visualization of read coverage and alignments in IGV, which can be explored in more detail by zooming into specific loci.
+
+</details>
+
 ### References
 
 OpenAI ChatGPT – used for language refinement and conceptual clarification of FASTQ format and FastQC quality assessment
 Prompt-based assistance during Session 5, Exercise 4
-
 
 </details>
