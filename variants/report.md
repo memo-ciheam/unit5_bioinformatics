@@ -236,59 +236,36 @@ Prompt-based assistance during Session 5, Exercise 3
 
 </details> 
 
-<details><summary><strong>🔴 Exercise 4</strong></summary>
----
-<details>## Exercise 4.1 – Exploring the IGV-Web application
+<details>
+<summary><strong>🔴 Exercise 4</strong></summary>
+<details>
+<summary><strong>🔴 Exercise 4.1 – Accessing the IGV-Web application</strong></summary>
 
-### Question
+## Question
 
-**Outside Docker, open the online IGV-Web application and explore the documentation.**
+**Outside Docker, open the URL https://igv.org/app in a browser and check the documentation.**
 
----
+## Actions performed
 
-### Commands / Actions performed
+The IGV-Web application documentation was accessed using a standard web browser by visiting:
 
-No terminal commands were used in this step.
+https://igv.org/doc/webapp/
 
-The following actions were performed:
+The main documentation sections describing IGV-Web, usage options, licensing, and citation information were reviewed.
 
-1. The IGV-Web documentation page was opened using a web browser:  
-   https://igv.org/doc/webapp/
+## Result
 
-2. The IGV-Web interface, usage instructions, and supported file formats were reviewed.
+The documentation confirms that IGV-Web is a browser-based version of the Integrative Genomics Viewer that allows interactive visualization of genomic data without requiring local installation.
 
-3. Information was examined regarding the different IGV implementations (desktop IGV, IGV-Web, and igv.js).
+IGV-Web supports loading local genomic files (e.g. FASTA, BAM, VCF, GTF) directly in the browser, and all data remain on the user’s local machine.
 
----
+## Evidence
 
-### Results
+![IGV-Web documentation overview](../images/ex4.1.1.png)
 
-IGV (Integrative Genomics Viewer) is a high-performance tool designed for the visual exploration of genomic data.
-
-The main points obtained from the documentation are summarized below:
-
-- IGV-Web is a browser-based application and does not require local installation.
-- Data can be loaded directly from the user’s local file system.
-- It supports common genomic file formats such as BAM, CRAM, VCF, FASTA, and GTF.
-- Uploaded data are not transferred to IGV servers and remain local to the user’s environment.
-
-Screenshots from the IGV-Web documentation page are shown below:
-
-![IGV-Web About page](../images/ex4.1.1.png)
-
-![IGV-Web license and source code](../images/ex4.1.2.png)
+![IGV usage license and source code](../images/ex4.1.2.png)
 
 ![IGV citation information](../images/ex4.1.3.png)
 
----
-
-### References
-
-IGV-Web Documentation  
-https://igv.org/doc/webapp/
-
-OpenAI ChatGPT – used for language refinement  
-Prompt-based assistance during Session 5, Exercise 4.1
-
 </details>
----
+
