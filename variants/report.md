@@ -439,7 +439,6 @@ annotated genes indicates successful mapping and data integrity.
 
 </details>
 
----
 
 ### References
 
