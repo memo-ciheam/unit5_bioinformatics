@@ -165,4 +165,75 @@ Prompt-based assistance during Session 5, Exercise 2
 
 </details>
 
+<details>
+<summary><strong>🔴 Exercise 3</strong></summary>
+
+## Question
+
+**Using samtools mpileup estimate the percentage of chromosome 10 with sequencing depth > 100.**
+
+---
+
+## Objective
+
+The aim of this exercise was to quantify sequencing depth along chromosome 10  
+and to estimate the proportion of genomic positions covered by more than 100 reads.
+
+---
+
+## Commands used
+
+```bash
+# Move to the working directory
+cd /mnt/d/backup_unit5/transcriptome_class
+
+# Generate pileup file for chromosome 10
+samtools mpileup -f reference.fna SAMEA2569438.chr10.sorted.bam > chr10.mpileup
+
+# Count total number of positions
+awk '{c++} END {print c}' chr10.mpileup
+
+# Count positions with depth > 100
+awk '$4 > 100 {c++} END {print c}' chr10.mpileup
+
+# Calculate percentage of positions with depth > 100
+awk '
+{
+  total++
+  if ($4 > 100) high++
+}
+END {
+  print (high/total)*100
+}' chr10.mpileup
+```
+
+## Results
+
+The pileup file contained per-base coverage information for chromosome 10.
+
+Total positions analysed: 3,991,887
+
+Positions with depth > 100: 51,811
+
+Percentage of positions with depth > 100: 1.30%
+
+## Interpretation
+
+Only a small fraction of chromosome 10 shows very high sequencing depth (>100).
+Such regions are typically associated with repetitive sequences, locally increased read mappability,
+or technical amplification effects.
+
+Estimating depth distribution is important to assess coverage uniformity
+and to interpret the reliability of downstream variant calling.
+
+## References
+
+Samtools mpileup documentation
+https://www.htslib.org/doc/samtools-mpileup.html
+
+OpenAI ChatGPT – used for language refinement and explanation of depth estimation
+Prompt-based assistance during Session 5, Exercise 3
+
+</details> 
+
 
