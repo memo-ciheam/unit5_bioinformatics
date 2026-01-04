@@ -351,6 +351,8 @@ variant positions in subsequent steps.
 
 ---
 
+</details>
+
 ### References
 
 OpenAI ChatGPT – used for language refinement and conceptual clarification of FASTQ format and FastQC quality assessment
