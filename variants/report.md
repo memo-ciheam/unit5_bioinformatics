@@ -235,11 +235,10 @@ OpenAI ChatGPT – used for language refinement and explanation of depth estimat
 Prompt-based assistance during Session 5, Exercise 3
 
 </details> 
----
+
 <details><summary><strong>🔴 Exercise 4</strong></summary>
-  
-<details>
-## Exercise 4.1 – Exploring the IGV-Web application
+---
+<details>## Exercise 4.1 – Exploring the IGV-Web application
 
 ### Question
 
