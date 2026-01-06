@@ -448,6 +448,11 @@ Prompt-based assistance during Session 5, Exercise 4
 </details>
 
 <details>
+<summary><strong>🔴 Exercise 5</strong></summary>
+  
+---  
+
+<details>
 <summary><strong>Exercise 5.1 – Opening IGV Web App</strong></summary>
 
 ## Question
