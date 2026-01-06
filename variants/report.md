@@ -442,7 +442,7 @@ annotated genes indicates successful mapping and data integrity.
 
 ### References
 
-OpenAI ChatGPT – used for language refinement and conceptual clarification of FASTQ format and FastQC quality assessment
+OpenAI ChatGPT – used for language refinement and report structuring  
 Prompt-based assistance during Session 5, Exercise 4
 
 </details>
@@ -600,14 +600,14 @@ IGV allows direct inspection of variant positions and facilitates downstream ana
 
 ---
 
-## References
 
-Robinson et al. (2011).  
-Integrative Genomics Viewer. *Nature Biotechnology*, 29, 24–26.
-
-OpenAI ChatGPT – used for language refinement and report structuring  
-Prompt-based assistance during Session 5, Exercise 5.4
 
 </details>
+
 ---
+
+## References
+
+OpenAI ChatGPT – used for language refinement and report structuring  
+Prompt-based assistance during Session 5, Exercise 5
 
