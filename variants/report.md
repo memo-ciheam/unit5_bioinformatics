@@ -474,16 +474,9 @@ This confirms that IGV-Web can be used directly without Docker to visualize geno
 
 ---
 
-## References
-
-Robinson et al. (2011).  
-Integrative Genomics Viewer. *Nature Biotechnology*, 29, 24–26.
-
-https://igv.org/app
 
 </details>
 
----
 
 <details>
 <summary><strong>Exercise 5.2 – Loading the reference genome in IGV</strong></summary>
