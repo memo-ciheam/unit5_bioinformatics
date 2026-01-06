@@ -446,3 +446,29 @@ OpenAI ChatGPT – used for language refinement and conceptual clarification of 
 Prompt-based assistance during Session 5, Exercise 4
 
 </details>
+
+<details>
+<summary><strong>Exercise 5.1 – Opening IGV Web App</strong></summary>
+
+## Question
+
+**Outside Docker, open the URL https://igv.org/app in a browser.**
+
+## Answer
+
+The IGV web application was successfully accessed using a standard web browser outside the Docker environment.
+
+This confirms that IGV-Web can be used directly without Docker to visualize genomic data stored on the local or WSL-accessible file system.
+
+## Evidence
+
+![IGV Web App opened successfully](../images/ex5.5.1.png)
+
+## References
+
+Robinson et al. (2011).  
+Integrative Genomics Viewer. *Nature Biotechnology*, 29, 24–26.
+
+https://igv.org/app
+
+</details>
