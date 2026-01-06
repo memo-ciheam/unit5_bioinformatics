@@ -349,8 +349,6 @@ gene annotation file is compatible with the loaded reference genome
 transcript structures to be interpreted in the context of read alignments and
 variant positions in subsequent steps.
 
----
-
 </details>
 
 ---
@@ -472,9 +470,6 @@ This confirms that IGV-Web can be used directly without Docker to visualize geno
 
 ![IGV Web App opened successfully](../images/exe5.5.1.png)
 
----
-
-
 </details>
 
 ---
@@ -553,8 +548,6 @@ gene annotation file is compatible with the loaded reference genome
 transcript structures to be interpreted in the context of read alignments and
 variant positions in subsequent steps.
 
----
-
 </details>
 
 ---
@@ -597,8 +590,6 @@ Both SNPs and INDELs are displayed as colored markers, allowing visual inspectio
 
 The successful visualization of the filtered VCF confirms that variant calling and filtering were performed correctly.
 IGV allows direct inspection of variant positions and facilitates downstream analysis, such as examining read support, genotype status, and overlap with gene models.
-
----
 
 </details>
 
@@ -645,8 +636,6 @@ alternative allele indicates that this INDEL variant is **heterozygous** in the
 mapped sample.
 
 This conclusion is based solely on the visual inspection of read alignments in IGV.
-
----
 
 </details>
 
