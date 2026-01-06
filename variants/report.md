@@ -558,3 +558,56 @@ variant positions in subsequent steps.
 </details>
 
 ---
+
+<details>
+<summary><strong>Exercise 5.4 – Loading filtered variants into IGV</strong></summary>
+
+## Question
+
+**Load the filtered VCF file with the variants using the Tracks → Local File option.**
+
+---
+
+## Procedure
+
+The filtered variant file generated in the previous steps was loaded into the IGV Web App.
+
+Using the top menu in IGV, the following option was selected:
+
+**Tracks → Local File**
+
+The filtered VCF file containing the variants was loaded:
+
+- `SAMEA2569438.chr10.filt.vcf.gz`
+
+The corresponding index file (`.csi`) was automatically recognized by IGV.
+
+---
+
+## Results
+
+After loading the filtered VCF file, variant tracks became visible along chromosome 10.
+Both SNPs and INDELs are displayed as colored markers, allowing visual inspection of variant density and distribution across the chromosome.
+
+![Filtered VCF loaded in IGV](../images/ex5.4.1.png)
+
+---
+
+## Interpretation
+
+The successful visualization of the filtered VCF confirms that variant calling and filtering were performed correctly.
+IGV allows direct inspection of variant positions and facilitates downstream analysis, such as examining read support, genotype status, and overlap with gene models.
+
+---
+
+## References
+
+Robinson et al. (2011).  
+Integrative Genomics Viewer. *Nature Biotechnology*, 29, 24–26.
+
+OpenAI ChatGPT – used for language refinement and report structuring  
+Prompt-based assistance during Session 5, Exercise 5.4
+
+</details>
+---
+
