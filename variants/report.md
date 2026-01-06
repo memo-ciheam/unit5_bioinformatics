@@ -476,9 +476,10 @@ Integrative Genomics Viewer. *Nature Biotechnology*, 29, 24–26.
 
 https://igv.org/app
 
-</details>
 ---
+</details>
 
+---
 <details>
 <summary><strong>Exercise 5.2 – Loading the reference genome in IGV</strong></summary>
 
