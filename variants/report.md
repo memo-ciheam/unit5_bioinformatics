@@ -467,7 +467,7 @@ This confirms that IGV-Web can be used directly without Docker to visualize geno
 
 ## Evidence
 
-![IGV Web App opened successfully](../images/ex5.5.1.png)
+![IGV Web App opened successfully](../images/exe5.5.1.png)
 
 ## References
 
