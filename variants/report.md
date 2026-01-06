@@ -479,3 +479,82 @@ https://igv.org/app
 </details>
 ---
 
+<details>
+<summary><strong>Exercise 5.2 – Loading the reference genome in IGV</strong></summary>
+
+## Question
+
+**Load the reference FASTA and index files with the Genome → Local File option.**
+
+---
+
+## Procedure
+
+The reference genome was loaded into IGV using the **Genome → Local File** option.
+Both the FASTA file and its index were selected simultaneously:
+
+- `reference.fna`
+- `reference.fna.fai`
+
+Loading both files allows IGV to correctly recognize chromosome names and genomic coordinates.
+
+---
+
+## Result
+
+After loading the reference genome, chromosome-level navigation became available in IGV.
+Chromosome 10 could be selected, and the genomic coordinate range  
+`chr10:1–23,207,287` was displayed, confirming that the reference genome was successfully loaded.
+
+![IGV reference genome loaded](../images/ex4.2.1.png)
+
+---
+
+## Interpretation
+
+This step establishes the genomic coordinate system required for downstream visualization.
+No read alignments or annotations are displayed at this stage; those are loaded in subsequent steps.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Exercise 5.3 – Loading gene annotation (GTF)</strong></summary>
+
+## Question
+
+**Load the gene annotation GTF file with the Tracks → Local File option.**
+
+---
+
+## Action performed
+
+The gene annotation file (`annotation.gtf`) was loaded into IGV using the  
+**Tracks → Local File** option.
+
+The annotation track was displayed across chromosome 10, showing gene models
+distributed along the reference genome. Gene structures are represented as
+blocks and connecting lines, corresponding to exons and introns.
+
+---
+
+## Evidence
+
+![IGV gene annotation loaded](../images/ex4.3.1.png)
+
+---
+
+## Interpretation
+
+The successful visualization of the `annotation.gtf` track confirms that the
+gene annotation file is compatible with the loaded reference genome
+(`reference.fna`). This allows genomic features such as genes, exons, and
+transcript structures to be interpreted in the context of read alignments and
+variant positions in subsequent steps.
+
+---
+
+</details>
+
+---
