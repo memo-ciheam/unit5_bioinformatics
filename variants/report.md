@@ -623,17 +623,15 @@ resolution, and the VCF and BAM tracks were examined together.
 - **Reference allele (REF):** C  
 - **Alternative allele (ALT):** T  
 
-In the BAM track, reads supporting both the reference and the alternative allele
-were observed at the same genomic position. The presence of “I” symbols in several
-reads indicates an insertion event at this locus, consistent with an INDEL variant.
+In the BAM track, reads supporting both the reference and the alternative allele were observed at the same genomic position. 
 
 ---
 
 ## Interpretation
 
-The simultaneous presence of reads supporting both the reference and the
-alternative allele indicates that this INDEL variant is **heterozygous** in the
-mapped sample.
+In the IGV view, the base at this position in the **reference genome** is shown as **C**. In the BAM track, some reads at the same position are observed to carry the **T** base, displayed in red.
+
+The presence of reads supporting both the reference and the alternative allele at the same locus indicates that this INDEL variant is **heterozygous**.
 
 This conclusion is based solely on the visual inspection of read alignments in IGV.
 
