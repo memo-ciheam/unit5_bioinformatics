@@ -596,44 +596,57 @@ IGV allows direct inspection of variant positions and facilitates downstream ana
 ---
 
 <details>
-<summary><strong>Exercise 5.5 – Inspection of an INDEL variant in IGV</strong></summary>
+<summary><strong>🔴 Exercise 5.5 – INDEL inspection at chr10:9,058,200–9,058,229</strong></summary>
 
 ## Question
 
-**Inspect the INDEL variant at chr10:9,058,200–9,058,229.  
-What are the reference (REF) and alternative (ALT) alleles?  
-Is this position heterozygous in the mapped sample?**
+**Take a look at the INDEL variant at chr10:9,058,200–9,058,229.  
+What are the reference and alternative alleles?  
+Is this position heterozygous in your mapped sample?**
 
 ---
 
-## Method
+## Observation (IGV)
 
-The filtered variant file (`SAMEA2569438.chr10.filt.vcf.gz`) and the sorted BAM file
-(`SAMEA2569438.chr10.sorted.bam`) were loaded into the IGV Web App.
+The variant was inspected in IGV by clicking on the INDEL shown in the VCF track
+(`SAMEA2569438.chr10.filt.vcf.gz`) at position **chr10:9,058,210**.
 
-The genomic region **chr10:9,058,200–9,058,229** was zoomed in to base-level
-resolution, and the VCF and BAM tracks were examined together.
+The IGV variant information panel reports:
 
----
+- **Chromosome:** 10  
+- **Position:** 9,058,210  
+- **Variant type:** INSERTION  
+- **Reference allele (REF):** `CAAAGGC`  
+- **Alternative allele (ALT):** `CAAAAGGC`  
+- **Filter:** PASS  
 
-## Results
+Genotype information shown in IGV:
 
-![INDEL variant visualized in IGV](../images/ex5.5.1.png)
-
-- **Reference allele (REF):** C  
-- **Alternative allele (ALT):** T  
-
-In the BAM track, reads supporting both the reference and the alternative allele were observed at the same genomic position. 
+- **Genotype:** `CAAAAGGC | CAAAAGGC`  
+- **Zygosity:** **Homozygous variant**  
+- **Depth (DP):** 3  
+- **Alternate allele observations (AO):** 3  
+- **Reference allele observations (RO):** 0  
 
 ---
 
 ## Interpretation
 
-In the IGV view, the base at this position in the **reference genome** is shown as **C**. In the BAM track, some reads at the same position are observed to carry the **T** base, displayed in red.
+All reads covering this position support the alternative allele (`AO = 3`, `RO = 0`).
+No reads supporting the reference allele were observed.
 
-The presence of reads supporting both the reference and the alternative allele at the same locus indicates that this INDEL variant is **heterozygous**.
+Therefore, based on the IGV display and the reported genotype,
+this INDEL is **homozygous for the alternative allele** in the mapped sample.
 
-This conclusion is based solely on the visual inspection of read alignments in IGV.
+---
+
+## Evidence
+
+![INDEL variant and genotype information in IGV](../images/ex5.5.2.png)
+
+![Detailed VCF entry for the INDEL in IGV](../images/ex5.5.3.png)
+
+---
 
 </details>
 
