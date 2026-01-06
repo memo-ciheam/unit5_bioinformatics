@@ -600,7 +600,52 @@ IGV allows direct inspection of variant positions and facilitates downstream ana
 
 ---
 
+</details>
+---
 
+<details>
+<summary><strong>Exercise 5.5 – Inspection of an INDEL variant in IGV</strong></summary>
+
+## Question
+
+**Inspect the INDEL variant at chr10:9,058,200–9,058,229.  
+What are the reference (REF) and alternative (ALT) alleles?  
+Is this position heterozygous in the mapped sample?**
+
+---
+
+## Method
+
+The filtered variant file (`SAMEA2569438.chr10.filt.vcf.gz`) and the sorted BAM file
+(`SAMEA2569438.chr10.sorted.bam`) were loaded into the IGV Web App.
+
+The genomic region **chr10:9,058,200–9,058,229** was zoomed in to base-level
+resolution, and the VCF and BAM tracks were examined together.
+
+---
+
+## Results
+
+![INDEL variant visualized in IGV](../images/ex5.5.1.png)
+
+- **Reference allele (REF):** C  
+- **Alternative allele (ALT):** T  
+
+In the BAM track, reads supporting both the reference and the alternative allele
+were observed at the same genomic position. The presence of “I” symbols in several
+reads indicates an insertion event at this locus, consistent with an INDEL variant.
+
+---
+
+## Interpretation
+
+The simultaneous presence of reads supporting both the reference and the
+alternative allele indicates that this INDEL variant is **heterozygous** in the
+mapped sample.
+
+This conclusion is based solely on the visual inspection of read alignments in IGV.
+
+---
 
 </details>
 
