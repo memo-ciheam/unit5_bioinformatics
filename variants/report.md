@@ -596,7 +596,7 @@ IGV allows direct inspection of variant positions and facilitates downstream ana
 ---
 
 <details>
-<summary><strong>🔴 Exercise 5.5 – INDEL inspection at chr10:9,058,200–9,058,229</strong></summary>
+<summary><strong>Exercise 5.5 – INDEL inspection at chr10:9,058,200–9,058,229</strong></summary>
 
 ## Question
 
@@ -642,6 +642,8 @@ The agreement between the VCF genotype information and the read-level evidence i
 ---
 
 </details>
+
+
 
 ---
 
