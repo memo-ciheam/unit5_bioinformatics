@@ -729,12 +729,15 @@ When comparing the SNP positions with the gene annotation track, no overlap with
 ---
 
 ### Conclusion
-The SNPs located at `chr10:10,000,166–10,000,226` are supported by aligned reads but do not fall within any annotated gene model according to the provided GTF file. These variants are therefore located in intergenic regions.
+The SNPs located at `chr10:10,000,166–10,000,226` are supported by aligned reads but **do not fall within any annotated gene model** according to the provided GTF file. **These variants are therefore located in intergenic regions**.
 
 ---
 
 ### IGV visualization
+
 ![SNP inspection and gene annotation overlap](../images/ex5.7.1.png)
+
+![SNP inspection and gene annotation overlap](../images/ex5.7.2.png)
 
 </details>
 
