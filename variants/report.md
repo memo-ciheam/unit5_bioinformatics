@@ -631,7 +631,8 @@ The agreement between the VCF genotype information and the read-level evidence i
 
 ## Evidence
 
-![INDEL variant inspection in IGV](../images/ex5.5.4.png)
+
+![INDEL variant inspection in IGV](../images/ex5.54.png)
 
 ![INDEL variant and genotype information in IGV](../images/ex5.5.2.png)
 
