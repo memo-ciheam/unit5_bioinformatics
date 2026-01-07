@@ -632,14 +632,12 @@ The agreement between the VCF genotype information and the read-level evidence i
 ## Evidence
 
 
-
 ![INDEL variant inspection in IGV](../images/ex.5.54.png)
 
 ![INDEL variant and genotype information in IGV](../images/ex5.5.2.png)
 
 ![Detailed VCF entry for the INDEL in IGV](../images/ex5.5.3.png)
 
----
 
 </details>
 
@@ -690,10 +688,15 @@ The SNPs do **not all have exactly the same DP**, but their read depths are **si
 
 ## Evidence
 
+
 ![SNP region overview](../images/ex5.6.1.png)  
+
 ![SNP inspection 1](../images/ex5.6.2.png)  
+
 ![SNP inspection 2](../images/ex5.6.3.png)  
+
 ![SNP inspection 3](../images/ex5.6.4.png)
+
 
 </details>
 
