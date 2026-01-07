@@ -643,7 +643,59 @@ The agreement between the VCF genotype information and the read-level evidence i
 
 </details>
 
+---
 
+<details>
+<summary><strong>Exercise 5.6</strong></summary>
+
+## Question
+
+**Check the SNPs at chr10:9,059,325–9,059,426. Are they all similar in terms of read depth (DP)?**
+
+---
+
+## Method
+
+- The genomic region `chr10:9,059,325–9,059,426` was visualized in IGV.
+- Multiple SNPs were selected from the VCF track.
+- For each SNP, the **DP (read depth)** value was recorded from the IGV information panel.
+- Coverage was visually verified using the BAM track histogram.
+
+---
+
+## Results
+
+The following DP values were observed for three different SNPs in the region:
+
+- SNP 1: **DP = 7**
+- SNP 2: **DP = 5**
+- SNP 3: **DP = 8**
+
+All inspected SNPs were reported as **heterozygous**, but their DP values were not identical.
+
+---
+
+## Interpretation
+
+Although the SNPs are located within the same genomic interval:
+
+- There are **small differences in read depth (DP)** between SNPs.
+- These differences are expected and reflect local coverage variation.
+- Overall, the DP values are **comparable and sufficient** for variant calling.
+
+**Conclusion:**  
+The SNPs do **not all have exactly the same DP**, but their read depths are **similar and within a comparable range**.
+
+---
+
+## Evidence
+
+![SNP region overview](../images/ex5.6.1.png)  
+![SNP inspection 1](../images/ex5.6.2.png)  
+![SNP inspection 2](../images/ex5.6.3.png)  
+![SNP inspection 3](../images/ex5.6.4.png)
+
+</details>
 
 ---
 
