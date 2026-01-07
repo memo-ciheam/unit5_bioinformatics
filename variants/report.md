@@ -689,6 +689,7 @@ The SNPs do **not all have exactly the same DP**, but their read depths are **si
 ## Evidence
 
 
+
 ![SNP region overview](../images/ex5.6.1.png)  
 
 
