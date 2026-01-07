@@ -735,11 +735,22 @@ The SNPs located at `chr10:10,000,166–10,000,226` are supported by aligned rea
 
 ### IGV visualization
 
+
 ![SNP inspection and gene annotation overlap](../images/ex5.7.1.png)
+
+
 
 ![SNP inspection and gene annotation overlap](../images/ex5.7.2.png)
 
+
 </details>
+
+---
+
+## Problems encountered
+
+I did not experience major difficulties during Exercise 5, as I used ChatGPT for guidance.  
+However, in Exercise 5.5, I had difficulty identifying where and how to obtain the reference and alternative alleles (REF and ALT), since this was not explicitly taught during the lecture.
 
 ---
 
