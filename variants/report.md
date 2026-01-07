@@ -701,6 +701,45 @@ The SNPs do **not all have exactly the same DP**, but their read depths are **si
 
 ---
 
+<details>
+<summary><strong>Exercise 5.7 – SNPs and gene model overlap</strong></summary>
+
+## Question 
+**Examining the aligned reads supporting the SNPs at `chr10:10,000,166–10,000,226` by loading the BAM and index files.  
+Do any of these fall into a gene model?**
+
+---
+
+### Method
+The genomic region `chr10:10,000,166–10,000,226` was visualized in IGV.  
+The following tracks were loaded:
+- Reference genome (`reference.fna`)
+- Gene annotation (`annotation.gtf`)
+- Aligned reads (`SAMEA2569438.chr10.sorted.bam`)
+- Variant calls (`SAMEA2569438.chr10.filt.vcf.gz`)
+
+SNP positions were examined by comparing the VCF track with the gene annotation track.
+
+---
+
+### Results
+Aligned reads in the BAM track clearly support the SNPs observed in the VCF track.  
+When comparing the SNP positions with the gene annotation track, no overlap with annotated gene models (exons or genes) was observed.
+
+---
+
+### Conclusion
+The SNPs located at `chr10:10,000,166–10,000,226` are supported by aligned reads but do not fall within any annotated gene model according to the provided GTF file. These variants are therefore located in intergenic regions.
+
+---
+
+### IGV visualization
+![SNP inspection and gene annotation overlap](../images/ex5.7.1.png)
+
+</details>
+
+---
+
 ## References
 
 OpenAI ChatGPT – used for language refinement and report structuring  
