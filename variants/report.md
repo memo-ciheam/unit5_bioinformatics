@@ -644,7 +644,7 @@ The agreement between the VCF genotype information and the read-level evidence i
 ---
 
 <details>
-<summary><strong>Exercise 5.6</strong></summary>
+<summary><strong>Exercise 5.6 – SNP depth comparison at chr10:9,059,325–9,059,426</strong></summary>
 
 ## Question
 
