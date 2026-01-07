@@ -215,9 +215,9 @@ The pileup file contained per-base coverage information for chromosome 10.
 
 **Total positions analysed: 3,991,887**
 
-**Positions with depth > 100: 51,811**
+**Positions with depth > 51,811**
 
-**Percentage of positions with depth > 100: 1.30%**
+**Percentage of positions with depth > (100 X 51,811)/ 3,991,887 = 1.30%**
 
 ## Interpretation
 
