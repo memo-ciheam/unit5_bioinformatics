@@ -606,41 +606,32 @@ Is this position heterozygous in your mapped sample?**
 
 ---
 
-## Observation (IGV)
+## Answer
 
-The variant was inspected in IGV by clicking on the INDEL shown in the VCF track
-(`SAMEA2569438.chr10.filt.vcf.gz`) at position **chr10:9,058,210**.
+The INDEL variant at **chr10:9,058,210** was inspected using IGV.
 
-The IGV variant information panel reports:
+- **Reference allele (REF): CAAAAGGC**  
+- **Alternative allele (ALT): CAAAAGGGC**  
+- Variant type: Insertion  
 
-- **Chromosome:** 10  
-- **Position:** 9,058,210  
-- **Variant type:** INSERTION  
-- **Reference allele (REF):** `CAAAGGC`  
-- **Alternative allele (ALT):** `CAAAAGGC`  
-- **Filter:** PASS  
+The genotype reported in the VCF track is:
 
-Genotype information shown in IGV:
+- Genotype: CAAAAGGC | CAAAAGGC  
+- **Zygosity: Homozygous variant**  
 
-- **Genotype:** `CAAAAGGC | CAAAAGGC`  
-- **Zygosity:** **Homozygous variant**  
-- **Depth (DP):** 3  
-- **Alternate allele observations (AO):** 3  
-- **Reference allele observations (RO):** 0  
+All aligned reads in the BAM track support the alternative allele, and no reads supporting the reference allele were observed. Therefore, this position is **not heterozygous**.
 
 ---
 
 ## Interpretation
 
-All reads covering this position support the alternative allele (`AO = 3`, `RO = 0`).
-No reads supporting the reference allele were observed.
-
-Therefore, based on the IGV display and the reported genotype,
-this INDEL is **homozygous for the alternative allele** in the mapped sample.
+The agreement between the VCF genotype information and the read-level evidence in the BAM track confirms that this INDEL variant is **homozygous** in the mapped sample.
 
 ---
 
 ## Evidence
+
+![INDEL variant inspection in IGV](../images/ex5.5.4.png)
 
 ![INDEL variant and genotype information in IGV](../images/ex5.5.2.png)
 
